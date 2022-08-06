@@ -10,7 +10,7 @@
 ## Descrição geral do projeto  
  O projeto é uma Pokedex, um sistema de registro de pokemons onde o usuário poderá cadastrar e ver quais pokemons ele ja pegou.
  Os pokemons terão uma descrição deles por meio dos seus tipos (exemplo: Fogo, água...).
- Ele seria usado por treinadores pokemon para facilitar o acompanhamento de seus pokemons
+ Ele seria usado por treinadores/usuários pokemon para facilitar o acompanhamento de seus pokemons
  Os serviços indispensáveis são o registro e observação dos pokemons.
  
 
@@ -20,5 +20,7 @@ Exemplo de requisitos para um sistema de automação comercial (A INFORMAÇÃO A
  * **REQ1** - O sistema deve controlar o acesso através de login e senha. O usuário do sistema será o treinador
  * **REQ2** - O sistema deve permitir visualizar os pokemons obtidos/cadastrados pelo usuário.
  * **REQ3** - O sistema deve permitir o gerenciamento (Create, Recover, Update e Delete - CRUD) de pokemons e essa ação pode ser feita pelo treinador.
- * **REQ4** - O sistema deve permitir ...
+ * **REQ4** - O sistema deve permitir que o usuário possa escolher em qual jogo ele pegou o pokemon.
+ * **REQ5** - O sistema deve permitir que o usuário possa escolher seus favoritos.
+ * **REQ6** - O sistema deve permitir que o usuário possa escolher reações para cada pokemon.
  
