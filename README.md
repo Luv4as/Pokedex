@@ -6,6 +6,7 @@
  * Marcelo Henrique de Souza Lemos Filho - seligaturma@gmail.com 
  * Cauê Henrique Coutinho Santos - hcs.caue@gmail.com
  * Tamires Silva Araújo - 4serimat@gmail.com
+ * Artur Raffael Baracho Cavalcanti - baracho.arturraffael@gmail.com
 
 ## Descrição geral do projeto  
  O projeto é uma Pokedex, um sistema de registro de pokemons onde o usuário poderá cadastrar e ver quais pokemons ele ja pegou.
