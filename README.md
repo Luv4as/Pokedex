@@ -20,9 +20,8 @@
  * **REQ3** - O sistema deve permitir o gerenciamento (Create, Recover, Update e Delete - CRUD) de pokemons e essa ação pode ser feita pelo treinador.
  * **REQ4** - O sistema deve permitir que o usuário possa escolher em qual jogo ele pegou o pokemon.
  * **REQ5** - O sistema deve permitir que o usuário possa escolher seus favoritos.
- * **REQ6** - O sistema deve permitir que o usuário possa escolher reações para cada pokemon [Quero Pegar, Amo Odeio].
+ * **REQ6** - O sistema deve permitir que o usuário possa escolher reações para cada pokemon [Quero Pegar, Amo, Odeio].
  * **REQ7** - O sistema deve permitir que o usuário crie e edite o seu perfil de treinador.
  * **REQ8** - O sistema deve permitir que o usuário crie e edite uma lista de treinadores amigos.
  * **REQ9** - O sistema deve permitir que o usuário crie e edite uma lista de treinadores rivais.
  * **REQ10** - O sistema deve permitir que o usuário crie e edite uma lista de registro de batalhas.
- * **REQ11** - O sistema deve permitir que o usuário 
