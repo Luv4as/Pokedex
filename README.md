@@ -25,3 +25,6 @@
  * **REQ8** - O sistema deve permitir que o usuário crie e edite uma lista de treinadores amigos.
  * **REQ9** - O sistema deve permitir que o usuário crie e edite uma lista de treinadores rivais.
  * **REQ10** - O sistema deve permitir que o usuário crie e edite uma lista de registro de batalhas.
+
+##Diagrama de classes básicas
+![IP2  Pokedex](https://user-images.githubusercontent.com/48563952/185745529-bc93a249-3ee4-419f-ae84-5d37d1bcdeaf.png)
