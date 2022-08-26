@@ -27,4 +27,7 @@
  * **REQ10** - O sistema deve permitir que o usuário crie e edite uma lista de registro de batalhas.
 
 ## Diagrama de classes básicas
-![IP2  Pokedex](https://user-images.githubusercontent.com/48563952/185745529-bc93a249-3ee4-419f-ae84-5d37d1bcdeaf.png)
+![IP2  Pokedex](https://user-images.githubusercontent.com/48563952/186936520-c2461387-29e6-4d55-b75e-28091ddbc528.png)
+
+## Modelo navegacional
+<img width="2432" alt="Diagram -  IP2  Pokedex (1)" src="https://user-images.githubusercontent.com/48563952/186936603-4ac8b031-8d24-4729-83bc-da4cb013c734.png">
