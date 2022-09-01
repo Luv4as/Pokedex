@@ -1,6 +1,7 @@
 public class PokemonTrainer {
     private int idTrainerCard;
     private String nickname;
+    private String urlImage;
 
     PokemonTrainer(int idTrainerCard, String nickname) {
         this.idTrainerCard = idTrainerCard;
@@ -21,5 +22,13 @@ public class PokemonTrainer {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
+    }
+
+    public String getUrlImage() {
+        return urlImage;
+    }
+
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
     }
 }
