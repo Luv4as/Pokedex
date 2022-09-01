@@ -10,8 +10,8 @@ public class Pokemon {
     private List<PokemonMovement> allMovements;
     private List<Pokemon> evolutions;
     private int evolutionLevel;
-    private boolean isFavorite;
-    private List<String> reactions;
+    private boolean isFavorite;  //capturado
+    private List<String> reactions;  //capturado
 
     public Pokemon(int idPokedex, int idParty, String name, String description, List<PokemonType> type, List<PokemonGames> availableInGames, List<PokemonMovement> allMovements, List<Pokemon> evolutions, int evolutionLevel, boolean isFavorite, List<String> reactions) {
         this.idPokedex = idPokedex;

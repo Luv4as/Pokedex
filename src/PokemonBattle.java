@@ -1,15 +1,15 @@
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 public class PokemonBattle {
     private int idBattle;
-    private Date battleDate;
+    private LocalDate battleDate;
     private boolean wonBattle;
     private PokemonGames pokemonGame;
     private List<CapturedPokemon> homePokemons;
     private List<CapturedPokemon> visitorPokemons;
 
-    PokemonBattle(int idBattle, Date battleDate, boolean wonBattle, PokemonGames pokemonGame, List<CapturedPokemon> homePokemons, List<CapturedPokemon> visitorPokemons) {
+    PokemonBattle(int idBattle, LocalDate battleDate, boolean wonBattle, PokemonGames pokemonGame, List<CapturedPokemon> homePokemons, List<CapturedPokemon> visitorPokemons) {
         this.idBattle = idBattle;
         this.battleDate = battleDate;
         this.wonBattle = wonBattle;
@@ -26,11 +26,11 @@ public class PokemonBattle {
         this.idBattle = idBattle;
     }
 
-    public Date getBattleDate() {
+    public LocalDate getBattleDate() {
         return battleDate;
     }
 
-    public void setBattleDate(Date battleDate) {
+    public void setBattleDate(LocalDate battleDate) {
         this.battleDate = battleDate;
     }
 
