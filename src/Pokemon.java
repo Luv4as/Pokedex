@@ -13,11 +13,26 @@ public class Pokemon {
     private boolean isFavorite;
     private List<String> reactions;
 
-    public int getIdPOkedex() {
+    public Pokemon(int idPokedex, int idParty, String name, String description, List<PokemonType> type, List<PokemonGames> availableInGames, List<PokemonMovement> allMovements, List<Pokemon> evolutions, int evolutionLevel, boolean isFavorite, List<String> reactions) {
+        this.idPokedex = idPokedex;
+        this.idParty = idParty;
+        this.name = name;
+        this.description = description;
+        this.type = type;
+        this.availableInGames = availableInGames;
+        this.allMovements = allMovements;
+        this.evolutions = evolutions;
+        this.evolutionLevel = evolutionLevel;
+        this.isFavorite = isFavorite;
+        this.reactions = reactions;
+    }
+
+
+    public int getIdPokedex() {
         return idPokedex;
     }
 
-    public void setIdPOkedex(int idPOkedex) {
+    public void setIdPokedex(int idPOkedex) {
         this.idPokedex = idPOkedex;
     }
 

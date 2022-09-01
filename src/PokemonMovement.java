@@ -9,6 +9,18 @@ public class PokemonMovement {
     private boolean makesContact;
     private boolean isHm;
 
+    public PokemonMovement(String name, String description, PokemonType type, int pp, MovementCategory category, int power, int accuracy, boolean makesContact, boolean isHm) {
+        this.name = name;
+        this.description = description;
+        this.type = type;
+        this.pp = pp;
+        this.category = category;
+        this.power = power;
+        this.accuracy = accuracy;
+        this.makesContact = makesContact;
+        this.isHm = isHm;
+    }
+
     public String getName() {
         return name;
     }
