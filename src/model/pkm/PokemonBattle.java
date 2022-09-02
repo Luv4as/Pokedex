@@ -1,3 +1,7 @@
+package model.pkm;
+
+import enums.PokemonGames;
+
 import java.time.LocalDate;
 import java.util.List;
 

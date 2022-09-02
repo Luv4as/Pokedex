@@ -1,3 +1,5 @@
+package exceptions;
+
 public class ElementoJaExisteException extends Exception {
 
     private static final long serialVersionUID = 4868332235826988515L;

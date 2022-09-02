@@ -1,3 +1,8 @@
+package model.pkm;
+
+import enums.MovementCategory;
+import enums.PokemonType;
+
 public class PokemonMovement {
     private String name;
     private String description;

@@ -1,3 +1,8 @@
+package data;
+
+import exceptions.ElementoJaExisteException;
+import exceptions.ElementoNaoExisteException;
+
 import java.util.List;
 
 public interface IRepositorioGenerico<T> {

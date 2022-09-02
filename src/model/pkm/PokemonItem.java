@@ -1,3 +1,7 @@
+package model.pkm;
+
+import enums.ItemCategory;
+
 public class PokemonItem {
     private String name;
     private String description;

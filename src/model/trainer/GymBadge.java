@@ -1,3 +1,5 @@
+package model.trainer;
+
 public class GymBadge {
     private String name;
     private String description;
