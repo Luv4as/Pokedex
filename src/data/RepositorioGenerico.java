@@ -2,21 +2,12 @@ package data;
 
 import exceptions.ElementoJaExisteException;
 import exceptions.ElementoNaoExisteException;
-
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class RepositorioGenerico<T> implements IRepositorioGenerico<T> {
 
     protected List<T> elementos;
-    private String filename;
-
-    @SuppressWarnings("unchecked")
-    public RepositorioGenerico(String filename) {
-        this.filename = filename;
-        this.elementos = new ArrayList<>();
-    }
 
     /**
      * Método somente deve permitir a inserção de um novo elementos se o mesmo
