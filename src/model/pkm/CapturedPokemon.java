@@ -1,15 +1,19 @@
-import java.util.Date;
+package model.pkm;
+
+import enums.PokemonGames;
+
+import java.time.LocalDate;
 import java.util.List;
 
 public class CapturedPokemon {
     private Pokemon basePokemon;
-    private Date captureDate;
+    private LocalDate captureDate;
     private PokemonItem item;
     private int level;
     private List<PokemonMovement> learnedMovements;
     private List<PokemonGames> capturedInGames;
 
-    CapturedPokemon(Pokemon basePokemon, Date captureDate, PokemonItem item, int level, List<PokemonMovement> learnedMovements, List<PokemonGames> capturedInGames) {
+    CapturedPokemon(Pokemon basePokemon, LocalDate captureDate, PokemonItem item, int level, List<PokemonMovement> learnedMovements, List<PokemonGames> capturedInGames) {
         this.basePokemon = basePokemon;
         this.captureDate = captureDate;
         this.item = item;
@@ -26,11 +30,11 @@ public class CapturedPokemon {
         this.basePokemon = basePokemon;
     }
 
-    public Date getCaptureDate() {
+    public LocalDate getCaptureDate() {
         return captureDate;
     }
 
-    public void setCaptureDate(Date captureDate) {
+    public void setCaptureDate(LocalDate captureDate) {
         this.captureDate = captureDate;
     }
 

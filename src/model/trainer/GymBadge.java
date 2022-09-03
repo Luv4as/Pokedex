@@ -1,12 +1,14 @@
-public class PokemonItem {
+package model.trainer;
+
+public class GymBadge {
     private String name;
     private String description;
-    private ItemCategory type;
+    private String spriteUrl;
 
-    PokemonItem(String name, String description, ItemCategory type) {
+    public GymBadge(String name, String description, String spriteUrl) {
         this.name = name;
         this.description = description;
-        this.type = type;
+        this.spriteUrl = spriteUrl;
     }
 
     public String getName() {
@@ -25,11 +27,11 @@ public class PokemonItem {
         this.description = description;
     }
 
-    public ItemCategory getType() {
-        return type;
+    public String getSpriteUrl() {
+        return spriteUrl;
     }
 
-    public void setType(ItemCategory type) {
-        this.type = type;
+    public void setSpriteUrl(String spriteUrl) {
+        this.spriteUrl = spriteUrl;
     }
 }
