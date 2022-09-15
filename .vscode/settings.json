@@ -1,0 +1,13 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "d:\\Java\\JavaLibs\\javafx-sdk-19\\lib\\javafx.base.jar",
+        "d:\\Java\\JavaLibs\\javafx-sdk-19\\lib\\javafx.controls.jar",
+        "d:\\Java\\JavaLibs\\javafx-sdk-19\\lib\\javafx.fxml.jar",
+        "d:\\Java\\JavaLibs\\javafx-sdk-19\\lib\\javafx.graphics.jar",
+        "d:\\Java\\JavaLibs\\javafx-sdk-19\\lib\\javafx.media.jar",
+        "d:\\Java\\JavaLibs\\javafx-sdk-19\\lib\\javafx.swing.jar",
+        "d:\\Java\\JavaLibs\\javafx-sdk-19\\lib\\javafx.web.jar",
+        "d:\\Java\\JavaLibs\\javafx-sdk-19\\lib\\javafx-swt.jar"
+    ]
+}
