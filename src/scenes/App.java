@@ -19,13 +19,12 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
        
         //Tela login
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("layoutLogin.fxml"));
-        Parent root = fxmlLoader.load();
+        Parent root = FXMLLoader.load(getClass().getResource("layoutLogin.fxml"));
         Scene tela = new Scene(root);
         primaryStage.setTitle("Login");
         primaryStage.setScene(tela);
         primaryStage.show();
-        
+
     }
 
 }
