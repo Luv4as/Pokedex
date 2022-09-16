@@ -56,10 +56,13 @@
                </padding>
             </ToolBar>
             <ImageView fx:id="perfilPhoto" fitHeight="82.0" fitWidth="80.0" layoutX="182.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
-            <Label layoutX="24.0" layoutY="90.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #f2bebb;" text="Nome Usuario">
+            <Label alignment="CENTER" layoutX="24.0" layoutY="90.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #f2bebb;" text="Nome Usuario" textFill="#515151">
                <font>
                   <Font name="Palatino Linotype" size="17.0" />
                </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </Label>
          </children>
     </AnchorPane>
