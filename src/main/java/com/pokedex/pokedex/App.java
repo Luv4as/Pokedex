@@ -1,4 +1,4 @@
-package scenes;
+package com.pokedex.pokedex;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -17,12 +17,11 @@ public class App extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
-       
+
         //Tela login
-        Parent root = FXMLLoader.load(getClass().getResource("layoutLogin.fxml"));
-        Scene tela = new Scene(root);
-        primaryStage.setTitle("Login");
-        primaryStage.setScene(tela);
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("layoutLogin.fxml"));
+        Parent root = loader.load();
+        primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
     }

@@ -18,7 +18,7 @@ public class LoginController {
 
     @FXML
     void logar(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/scenes/layoutPerfil.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/pokedex/pokedex/layoutPerfil.fxml"));
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Perfil");

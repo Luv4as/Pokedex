@@ -1,4 +1,4 @@
-module com.example.pokedexip2 {
+module com.pokedex.pokedex {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -6,6 +6,6 @@ module com.example.pokedexip2 {
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.pokedexip2 to javafx.fxml;
-    exports com.example.pokedexip2;
+    opens com.pokedex.pokedex to javafx.fxml;
+    exports com.pokedex.pokedex;
 }
