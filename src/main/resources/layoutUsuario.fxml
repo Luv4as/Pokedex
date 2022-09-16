@@ -7,6 +7,8 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -55,7 +57,7 @@
       </MenuBar>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <SplitPane dividerPositions="0.7143974960876369" prefHeight="775.0" prefWidth="1280.0">
+            <SplitPane dividerPositions="0.5" prefHeight="775.0" prefWidth="1280.0">
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="773.0" prefWidth="360.0" style="-fx-background-color: #F0F0F0;">
                      <children>
@@ -76,7 +78,23 @@
                            </font>
                         </Label>
                      </children></AnchorPane>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F8F8F8;" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F8F8F8;">
+                     <children>
+                        <TabPane layoutX="1.0" layoutY="1.0" prefHeight="773.0" prefWidth="636.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Pokemons capturados">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                            <Tab text="Untitled Tab 2">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              </content>
+                            </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children></AnchorPane>
                </items>
             </SplitPane>
          </children>
