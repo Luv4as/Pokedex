@@ -26,11 +26,5 @@ public class App extends Application {
         primaryStage.show();
 
     }
-//    public void start(Stage stage) throws Exception {
-//        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("layoutUsuario.fxml"));
-//        Parent root = loader.load();
-//        stage.setScene(new Scene(root));
-//        stage.show();
-//    }
 
 }
