@@ -25,6 +25,14 @@ public class RegBattleController {
     private Button btRegBattle;
 
     @FXML
+    private Button btRegistro;
+
+    @FXML
+    void adicionarRegistro(ActionEvent event) {
+
+    }
+
+    @FXML
     void changeToPerfil(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutPerfil.fxml"));
         Scene tela = new Scene(root);

@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="717.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.data.RegBatlleController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="1280.0" fill="#ef4036" height="60.0" layoutY="-8.0" stroke="#ef4036" strokeType="INSIDE" width="1280.0" />
+      <ImageView layoutX="588.0" layoutY="4.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%203.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="651.0" layoutY="5.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%203.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="713.0" layoutY="5.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%204.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="1054.0" layoutY="7.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/NOME%20DO%20USUÁRIO.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="1067.0" layoutY="27.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Pokemons%20Capturados_%20999.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="1203.0" layoutY="3.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%204%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="80.0" fitWidth="787.0" layoutX="21.0" layoutY="109.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%20204@2x.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btRegistro" graphicTextGap="0.0" layoutX="21.0" layoutY="106.0" mnemonicParsing="false" onAction="#adicionarRegistro" opacity="0.0" prefHeight="86.0" prefWidth="796.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="140.0" fitWidth="787.0" layoutX="21.0" layoutY="228.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%20204%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="28.0" layoutY="254.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%204%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="133.0" layoutY="244.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="133.0" layoutY="298.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="198.0" layoutY="244.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="198.0" layoutY="298.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="259.0" layoutY="244.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="259.0" layoutY="298.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="706.0" layoutY="250.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%204%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="640.0" layoutY="244.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="640.0" layoutY="298.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="571.0" layoutY="244.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="571.0" layoutY="298.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="505.0" layoutY="244.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="505.0" layoutY="298.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="390.0" layoutY="283.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/VS.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="787.0" layoutX="22.0" layoutY="384.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%20204%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="28.0" layoutY="410.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%204%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="133.0" layoutY="404.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="133.0" layoutY="461.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="198.0" layoutY="404.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="198.0" layoutY="461.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="259.0" layoutY="404.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="259.0" layoutY="461.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="505.0" layoutY="404.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="505.0" layoutY="461.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="571.0" layoutY="404.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="571.0" layoutY="461.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="640.0" layoutY="404.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="640.0" layoutY="461.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="706.0" layoutY="410.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%204%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="390.0" layoutY="439.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/VS.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="140.0" fitWidth="787.0" layoutX="22.0" layoutY="544.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%20204%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="28.0" layoutY="570.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%204%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="133.0" layoutY="564.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="133.0" layoutY="622.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="198.0" layoutY="622.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="198.0" layoutY="564.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="259.0" layoutY="564.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="259.0" layoutY="622.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="706.0" layoutY="570.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Rectangle%204%20(2).png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="640.0" layoutY="564.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="640.0" layoutY="622.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="571.0" layoutY="564.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="571.0" layoutY="622.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="505.0" layoutY="564.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="505.0" layoutY="622.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/Ellipse%209.png" />
+         </image>
+      </ImageView>
+      <ImageView layoutX="390.0" layoutY="607.0">
+         <image>
+            <Image url="@../../../../../../../../../../../../Downloads/VS.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
