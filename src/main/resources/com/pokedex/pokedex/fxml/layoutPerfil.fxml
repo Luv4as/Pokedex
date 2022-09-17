@@ -35,6 +35,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -43,7 +44,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.pokedex.pokedex.data.PerfilController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.data.PerfilController">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
@@ -117,7 +118,14 @@
                   <Font name="Palatino Linotype" size="24.0" />
                </font>
             </Label>
-            <Pane layoutX="888.0" layoutY="60.0" opacity="0.45" prefHeight="740.0" prefWidth="392.0" style="-fx-background-color: CCCCCC;" />
+            <Pane layoutX="852.0" layoutY="60.0" opacity="0.45" prefHeight="740.0" prefWidth="428.0" style="-fx-background-color: CCCCCC;">
+               <children>
+                  <ScrollPane layoutX="18.0" layoutY="78.0" prefHeight="658.0" prefWidth="398.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="873.0" prefWidth="402.0" />
+                    </content>
+                  </ScrollPane>
+               </children></Pane>
             <ImageView fitHeight="60.0" fitWidth="174.0" layoutX="932.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/pokemons%20capturados.png" />
@@ -135,6 +143,86 @@
                   <Font size="24.0" />
                </font>
             </Label>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="370.0" layoutY="307.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="427.0" AnchorPane.leftAnchor="370.0" AnchorPane.rightAnchor="1032.0" AnchorPane.topAnchor="305.0">
+               <image>
+                  <Image url="@../images/Rectangle%20212.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="64.0" fitWidth="59.35" layoutX="382.0" layoutY="323.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="433.69333267211914" AnchorPane.leftAnchor="382.0" AnchorPane.rightAnchor="1045.650001525879" AnchorPane.topAnchor="316.0">
+               <image>
+                  <Image url="@../images/badges-amarelo%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="491.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="420.0" AnchorPane.leftAnchor="491.0" AnchorPane.rightAnchor="845.0" AnchorPane.topAnchor="305.0">
+               <image>
+                  <Image url="@../images/Rectangle%20213.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="65.77" fitWidth="57.91" layoutX="504.0" layoutY="316.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="429.2300033569336" AnchorPane.leftAnchor="504.0" AnchorPane.rightAnchor="859.2021217346191" AnchorPane.topAnchor="316.0">
+               <image>
+                  <Image url="@../images/badges-azul%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="370.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="370.0" AnchorPane.topAnchor="411.0">
+               <image>
+                  <Image url="@../images/Rectangle%20215.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="76.0" fitWidth="80.27" layoutX="369.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="369.0" AnchorPane.topAnchor="417.0">
+               <image>
+                  <Image url="@../images/badges-lgbt%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="491.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="491.0" AnchorPane.topAnchor="411.0">
+               <image>
+                  <Image url="@../images/Rectangle%20214.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="79.44" fitWidth="75.0" layoutX="499.0" layoutY="415.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="499.0" AnchorPane.topAnchor="415.0">
+               <image>
+                  <Image url="@../images/badges-red%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="612.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="612.0" AnchorPane.topAnchor="305.0">
+               <image>
+                  <Image url="@../images/Rectangle%20212.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="88.0" fitWidth="76.12" layoutX="617.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="617.0" AnchorPane.topAnchor="312.0">
+               <image>
+                  <Image url="@../images/badges-removebg-preview%20(1)%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="612.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="612.0" AnchorPane.topAnchor="411.0">
+               <image>
+                  <Image url="@../images/Rectangle%20213.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="88.0" fitWidth="76.0" layoutX="617.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="617.0" AnchorPane.topAnchor="418.0">
+               <image>
+                  <Image url="@../images/badges-verde%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="730.0" layoutY="411.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="733.0" AnchorPane.rightAnchor="669.0" AnchorPane.topAnchor="411.0">
+               <image>
+                  <Image url="@../images/Rectangle%20212.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="88.0" fitWidth="76.0" layoutX="737.0" layoutY="418.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="737.0" AnchorPane.topAnchor="418.0">
+               <image>
+                  <Image url="@../images/badges-removebg-preview%201.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="86.0" fitWidth="85.0" layoutX="699.0" layoutY="247.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="733.0" AnchorPane.topAnchor="305.0">
+               <image>
+                  <Image url="@../images/Rectangle%20213.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="85.0" fitWidth="85.0" layoutX="741.0" layoutY="311.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="741.0" AnchorPane.topAnchor="311.0">
+               <image>
+                  <Image url="@../images/badges-rosa%201.png" />
+               </image>
+            </ImageView>
          </children>
     </AnchorPane>
   </children>
