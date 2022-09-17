@@ -44,17 +44,17 @@
          <children>
             <ImageView fitHeight="721.0" fitWidth="1344.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <image>
-                  <Image url="@../images/imageLogin.png" />
+                  <Image url="@../images/login/imageLogin.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="239.0" fitWidth="857.0" layoutX="212.0" layoutY="223.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/ImageLogo.png" />
+                  <Image url="@../images/login/ImageLogo.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="50.0" fitWidth="365.0" layoutX="488.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/ImageGoogle.png" />
+                  <Image url="@../images/login/ImageGoogle.png" />
                </image>
             </ImageView>
             <Button fx:id="btLogin" layoutX="488.0" layoutY="452.0" mnemonicParsing="false" onAction="#logar" opacity="0.0" prefHeight="50.0" prefWidth="304.0" />
