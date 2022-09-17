@@ -61,7 +61,7 @@
                      <children>
                         <ScrollPane layoutX="33.0" layoutY="92.0" prefHeight="366.0" prefWidth="290.0">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="272.0" style="-fx-background-color: #8CDDCA;">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="507.0" prefWidth="272.0" style="-fx-background-color: #C8E8E1;">
                                  <children>
                                     <Pane layoutX="25.0" layoutY="22.0" prefHeight="84.0" prefWidth="200.0" style="-fx-background-color: #ABBA8B;" />
                                     <Pane layoutX="25.0" layoutY="128.0" prefHeight="84.0" prefWidth="200.0" style="-fx-background-color: #ABBA8B;" />
@@ -75,7 +75,7 @@
                               <Font size="32.0" />
                            </font>
                         </Label>
-                        <Pane layoutX="33.0" layoutY="592.0" prefHeight="132.0" prefWidth="290.0" style="-fx-background-color: #8CDDCA;" />
+                        <Pane layoutX="33.0" layoutY="592.0" prefHeight="132.0" prefWidth="290.0" style="-fx-background-color: #C8E8E1;" />
                         <Label layoutX="28.0" layoutY="535.0" text="Evoluções">
                            <font>
                               <Font size="32.0" />
