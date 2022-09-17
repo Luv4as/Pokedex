@@ -36,6 +36,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -48,21 +49,89 @@
             <ToolBar nodeOrientation="LEFT_TO_RIGHT" opacity="0.75" prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: EF4036;">
               <items>
                   <Button fx:id="btPerfil" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-                  <Button fx:id="btPokedex" alignment="CENTER" mnemonicParsing="false" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-                  <Button fx:id="btRegBattle" alignment="CENTER" mnemonicParsing="false" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
+                  <Button fx:id="btPokedex" alignment="CENTER" mnemonicParsing="false" onAction="#changeToPokedex" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
+                  <Button fx:id="btRegBattle" alignment="CENTER" mnemonicParsing="false" onAction="#changeToRegBattle" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
               </items>
                <padding>
                   <Insets left="576.0" />
                </padding>
             </ToolBar>
-            <ImageView fx:id="perfilPhoto" fitHeight="82.0" fitWidth="80.0" layoutX="182.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
-            <Label alignment="CENTER" layoutX="24.0" layoutY="90.0" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: #f2bebb;" text="Nome Usuario" textFill="#515151">
+            <Label layoutX="48.0" layoutY="223.0" prefHeight="46.0" prefWidth="263.0" text="Pokemons Capturados:" textFill="#333368">
                <font>
-                  <Font name="Palatino Linotype" size="17.0" />
+                  <Font name="Palatino Linotype" size="24.0" />
                </font>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
+            </Label>
+            <Label fx:id="nPokCapt" layoutX="305.0" layoutY="231.0" text="00" textFill="#eb5a5a">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="261.0" prefHeight="46.0" prefWidth="214.0" text="Batalhas Feitas:" textFill="#333368">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="nBatFeitas" layoutX="220.0" layoutY="269.0" text="00" textFill="#eb5a5a">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="299.0" prefHeight="46.0" prefWidth="214.0" text="Vitórias:" textFill="#333368">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="nVit" layoutX="147.0" layoutY="307.0" text="00" textFill="#eb5a5a">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="337.0" prefHeight="46.0" prefWidth="214.0" text="Derrotas:" textFill="#333368">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="nDer" layoutX="159.0" layoutY="345.0" prefHeight="31.0" prefWidth="40.0" text="00" textFill="#eb5a5a">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="48.0" layoutY="375.0" prefHeight="46.0" prefWidth="214.0" text="Fugas:" textFill="#333368">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="nFugas" layoutX="131.0" layoutY="383.0" text="00" textFill="#eb5a5a">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Button fx:id="btSwitchTRN" layoutX="1073.0" layoutY="86.0" mnemonicParsing="false" onAction="#change" opacity="0.0" prefHeight="46.0" prefWidth="117.0" />
+            <Label layoutX="519.0" layoutY="223.0" prefHeight="46.0" prefWidth="263.0" text="Insignias:" textFill="#333368">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="640.0" layoutY="231.0" prefHeight="31.0" prefWidth="40.0" text="/8" textFill="#eb5a5a">
+               <font>
+                  <Font name="Palatino Linotype" size="24.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="60.0" fitWidth="174.0" layoutX="932.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/pokemons%20capturados.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btSwitchPKC" layoutX="940.0" layoutY="86.0" mnemonicParsing="false" onAction="#change" opacity="0.0" prefHeight="46.0" prefWidth="117.0" />
+            <ImageView fitHeight="60.0" fitWidth="174.0" layoutX="1065.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/terinadores.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nInsignias" layoutX="628.0" layoutY="229.0" prefHeight="35.0" prefWidth="24.0" text="0" textFill="#e86a6a">
+               <font>
+                  <Font size="24.0" />
+               </font>
             </Label>
          </children>
     </AnchorPane>
