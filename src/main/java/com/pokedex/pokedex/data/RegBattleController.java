@@ -28,8 +28,13 @@ public class RegBattleController {
     private Button btRegistro;
 
     @FXML
-    void adicionarRegistro(ActionEvent event) {
-
+    void adicionarRegistro(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutBattle.fxml"));
+        Scene tela = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Battle");
+        stage.setScene(tela);
+        stage.show();
     }
 
     @FXML
