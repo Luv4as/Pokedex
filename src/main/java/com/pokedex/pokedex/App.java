@@ -16,21 +16,21 @@ public class App extends Application {
      * @see javafx.application.Application#start(javafx.stage.Stage)
      */
     @Override
-    public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/main/resources/layoutUsuario.fxml"));
-        Parent root = loader.load();
-        stage.setScene(new Scene(root));
-        stage.show();
-    }
 
-//    public void start(Stage primaryStage) throws Exception {
-//
-//        //Tela login
-//        FXMLLoader loader = new FXMLLoader(App.class.getResource("layoutUsuario.fxml"));
+
+    public void start(Stage primaryStage) throws Exception {
+
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("layoutUsuario.fxml"));
+        Parent root = loader.load();
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+
+    }
+//    public void start(Stage stage) throws Exception {
+//        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("layoutUsuario.fxml"));
 //        Parent root = loader.load();
-//        primaryStage.setScene(new Scene(root));
-//        primaryStage.show();
-//
+//        stage.setScene(new Scene(root));
+//        stage.show();
 //    }
 
 }

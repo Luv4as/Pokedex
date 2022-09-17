@@ -1,4 +1,4 @@
-package data;
+package com.pokedex.pokedex.data;
 
 import exceptions.ElementoJaExisteException;
 import exceptions.ElementoNaoExisteException;

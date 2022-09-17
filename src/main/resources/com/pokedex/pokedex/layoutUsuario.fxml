@@ -7,6 +7,8 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -75,7 +77,12 @@
                               <Font size="32.0" />
                            </font>
                         </Label>
-                        <Pane layoutX="33.0" layoutY="592.0" prefHeight="132.0" prefWidth="290.0" style="-fx-background-color: #C8E8E1;" />
+                        <Pane layoutX="33.0" layoutY="592.0" prefHeight="132.0" prefWidth="314.0" style="-fx-background-color: #C8E8E1;">
+                           <children>
+                              <Pane layoutX="210.0" layoutY="24.0" prefHeight="84.0" prefWidth="89.0" style="-fx-background-color: #8CDDCA;" />
+                              <Pane layoutX="113.0" layoutY="24.0" prefHeight="84.0" prefWidth="89.0" style="-fx-background-color: #8CDDCA;" />
+                              <Pane layoutX="14.0" layoutY="24.0" prefHeight="84.0" prefWidth="89.0" style="-fx-background-color: #8CDDCA;" />
+                           </children></Pane>
                         <Label layoutX="28.0" layoutY="535.0" text="Evoluções">
                            <font>
                               <Font size="32.0" />
@@ -86,7 +93,11 @@
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="453.0" layoutY="-22.0" prefHeight="108.0" prefWidth="361.0" text="REAÇÕES  ILUSTRATIO PARA NÃO COLOCAR IMG E DAR ERRADO" />
+                        <ImageView fitHeight="25.0" fitWidth="80.0" layoutX="755.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/Vector.png" />
+                           </image>
+                        </ImageView>
                      </children></AnchorPane>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F8F8F8;">
                      <children>

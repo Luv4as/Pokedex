@@ -1,4 +1,4 @@
-package data;
+package com.pokedex.pokedex.data;
 
 import model.pkm.Pokemon;
 import model.trainer.PokemonTrainer;
