@@ -1,4 +1,4 @@
-package model.pkm;
+package com.pokedex.pokedex.model.pkm;
 
 import java.util.List;
 

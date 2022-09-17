@@ -1,6 +1,6 @@
-package model.pkm;
+package com.pokedex.pokedex.model.pkm;
 
-import enums.ItemCategory;
+import com.pokedex.pokedex.enums.ItemCategory;
 
 public class PokemonItem {
     private String name;

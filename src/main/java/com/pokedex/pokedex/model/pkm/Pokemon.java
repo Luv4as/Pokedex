@@ -1,7 +1,7 @@
-package model.pkm;
+package com.pokedex.pokedex.model.pkm;
 
-import enums.PokemonGames;
-import enums.PokemonType;
+import com.pokedex.pokedex.enums.PokemonGames;
+import com.pokedex.pokedex.enums.PokemonType;
 
 import java.util.List;
 

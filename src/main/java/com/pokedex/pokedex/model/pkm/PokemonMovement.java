@@ -1,7 +1,7 @@
-package model.pkm;
+package com.pokedex.pokedex.model.pkm;
 
-import enums.MovementCategory;
-import enums.PokemonType;
+import com.pokedex.pokedex.enums.MovementCategory;
+import com.pokedex.pokedex.enums.PokemonType;
 
 public class PokemonMovement {
     private String name;

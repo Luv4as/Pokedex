@@ -1,6 +1,6 @@
-package model.pkm;
+package com.pokedex.pokedex.model.pkm;
 
-import enums.PokemonGames;
+import com.pokedex.pokedex.enums.PokemonGames;
 
 import java.time.LocalDate;
 import java.util.List;

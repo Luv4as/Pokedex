@@ -1,4 +1,4 @@
-package exceptions;
+package com.pokedex.pokedex.exceptions;
 
 public class ElementoNaoExisteException extends Exception {
 

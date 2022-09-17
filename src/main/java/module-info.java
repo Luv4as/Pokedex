@@ -7,5 +7,8 @@ module com.pokedex.pokedex {
     requires org.kordamp.bootstrapfx.core;
 
     opens com.pokedex.pokedex to javafx.fxml;
+
+    opens com.pokedex.pokedex.data to javafx.fxml;
+
     exports com.pokedex.pokedex;
 }

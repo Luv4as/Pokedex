@@ -1,7 +1,7 @@
 package com.pokedex.pokedex.data;
 
-import exceptions.ElementoJaExisteException;
-import exceptions.ElementoNaoExisteException;
+import com.pokedex.pokedex.exceptions.ElementoJaExisteException;
+import com.pokedex.pokedex.exceptions.ElementoNaoExisteException;
 
 import java.util.List;
 
