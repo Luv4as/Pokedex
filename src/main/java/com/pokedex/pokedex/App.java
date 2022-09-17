@@ -18,7 +18,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
 
         //Tela login
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("fxml/layoutLogin.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("fxml/layoutUsuario.fxml"));
         Parent root = loader.load();
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
