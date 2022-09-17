@@ -12,14 +12,11 @@ public class App extends Application {
         launch(args);
     }
 
-    /* (non-Javadoc)
-     * @see javafx.application.Application#start(javafx.stage.Stage)
-     */
     @Override
     public void start(Stage primaryStage) throws Exception {
 
         //Tela login
-        FXMLLoader loader = new FXMLLoader(App.class.getResource("layoutLogin.fxml"));
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("fxml/layoutLogin.fxml"));
         Parent root = loader.load();
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

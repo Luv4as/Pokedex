@@ -1,8 +1,8 @@
-package model.trainer;
+package com.pokedex.pokedex.model.trainer;
 
-import model.pkm.CapturedPokemon;
-import model.pkm.PokemonItem;
-import model.pkm.PokemonMovement;
+import com.pokedex.pokedex.model.pkm.CapturedPokemon;
+import com.pokedex.pokedex.model.pkm.PokemonItem;
+import com.pokedex.pokedex.model.pkm.PokemonMovement;
 
 import java.util.List;
 

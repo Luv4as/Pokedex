@@ -1,7 +1,7 @@
-package data;
+package com.pokedex.pokedex.data;
 
-import model.pkm.Pokemon;
-import model.trainer.PokemonTrainer;
+import com.pokedex.pokedex.model.pkm.Pokemon;
+import com.pokedex.pokedex.model.trainer.PokemonTrainer;
 import java.util.List;
 
 public class Controlador {

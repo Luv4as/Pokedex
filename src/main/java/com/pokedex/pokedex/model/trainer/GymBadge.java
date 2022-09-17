@@ -1,4 +1,4 @@
-package model.trainer;
+package com.pokedex.pokedex.model.trainer;
 
 public class GymBadge {
     private String name;
