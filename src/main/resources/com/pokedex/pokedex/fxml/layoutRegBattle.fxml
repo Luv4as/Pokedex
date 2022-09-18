@@ -7,6 +7,7 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -21,7 +22,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.data.RegBattleController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.pokedex.pokedex.data.RegBattleController">
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="802.0" prefWidth="1280.0">
          <children>
@@ -90,31 +91,49 @@
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="522.0" layoutY="85.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="465.0" layoutY="85.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="465.0" layoutY="23.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="522.0" layoutY="23.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="578.0" layoutY="23.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="637.0" layoutY="37.0">
                                                    <image>
@@ -125,31 +144,49 @@
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="263.0" layoutY="23.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="207.0" layoutY="84.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="207.0" layoutY="23.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="149.0" layoutY="84.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView layoutX="149.0" layoutY="23.0">
                                                    <image>
                                                       <Image url="@../images/regBattle/Ellipse%209.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView fitHeight="50.0" fitWidth="72.0" layoutX="350.0" layoutY="58.0">
                                                    <image>
@@ -172,7 +209,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="712.0" prefWidth="899.0">
                                  <children>
-                                    <ScrollPane layoutX="-4.0" layoutY="-2.0" prefHeight="713.0" prefWidth="512.0">
+                                    <ScrollPane layoutX="-4.0" layoutY="4.0" prefHeight="707.0" prefWidth="512.0">
                                        <content>
                                           <GridPane alignment="CENTER" prefHeight="1198.0" prefWidth="497.0" style="-fx-background-color: cdcdcd;">
                                             <columnConstraints>
@@ -266,16 +303,25 @@
                                                    <image>
                                                       <Image url="@../images/regBattle/image_4.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView fitHeight="110.0" fitWidth="114.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                                                    <image>
                                                       <Image url="@../images/regBattle/squirtle.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <ImageView fitHeight="118.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                                                    <image>
                                                       <Image url="@../images/regBattle/charmander.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
                                                 <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" width="129.0" GridPane.rowIndex="1">
                                                    <fill>
@@ -583,6 +629,150 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
+                                                <ImageView fitHeight="94.0" fitWidth="124.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                                   <image>
+                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                   </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
+                                                </ImageView>
                                              </children>
                                           </GridPane>
                                        </content>
@@ -595,7 +785,7 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <ScrollPane prefHeight="709.0" prefWidth="506.0">
+                                    <ScrollPane layoutY="4.0" prefHeight="705.0" prefWidth="506.0">
                                        <content>
                                           <GridPane prefHeight="1283.0" prefWidth="488.0" style="-fx-background-color: cdcdcd;">
                                             <columnConstraints>
@@ -625,31 +815,46 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="200.0" />
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" stroke="RED" strokeType="INSIDE" width="200.0">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect></Rectangle>
                                                 <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Palmeirinha" textAlignment="CENTER" wrappingWidth="177.13671875">
                                                    <font>
                                                       <Font name="Palatino Linotype" size="30.0" />
                                                    </font>
                                                 </Text>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="200.0" GridPane.columnIndex="1" />
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" stroke="RED" strokeType="INSIDE" width="200.0" GridPane.columnIndex="1">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect></Rectangle>
                                                 <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Kelviskilvezin" textAlignment="CENTER" wrappingWidth="218.13671875" GridPane.columnIndex="1">
                                                    <font>
                                                       <Font name="Palatino Linotype" size="30.0" />
                                                    </font>
                                                 </Text>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="200.0" GridPane.rowIndex="1" />
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" stroke="RED" strokeType="INSIDE" width="200.0" GridPane.rowIndex="1">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect></Rectangle>
                                                 <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Njordinho" textAlignment="CENTER" wrappingWidth="177.13671875" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Palatino Linotype" size="30.0" />
                                                    </font>
                                                 </Text>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" stroke="RED" strokeType="INSIDE" width="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect></Rectangle>
                                                 <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Luvinhas" textAlignment="CENTER" wrappingWidth="177.13671875" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                    <font>
                                                       <Font name="Palatino Linotype" size="30.0" />
                                                    </font>
                                                 </Text>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="200.0" GridPane.rowIndex="2" />
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" stroke="RED" strokeType="INSIDE" width="200.0" GridPane.rowIndex="2">
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect></Rectangle>
                                                 <Text stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Vermelhinho" textAlignment="CENTER" wrappingWidth="177.13671875" GridPane.rowIndex="2">
                                                    <font>
                                                       <Font name="Palatino Linotype" size="30.0" />
