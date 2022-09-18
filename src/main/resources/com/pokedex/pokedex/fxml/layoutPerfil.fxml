@@ -37,18 +37,24 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.ToolBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.pokedex.pokedex.data.PerfilController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.data.PerfilController">
   <children>
       <AnchorPane prefHeight="802.0" prefWidth="1283.0">
          <children>
@@ -64,93 +70,63 @@
             </ToolBar>
             <SplitPane dividerPositions="0.5" layoutY="58.0" prefHeight="744.0" prefWidth="1281.0">
                <items>
-                <AnchorPane maxHeight="-1.0" maxWidth="-1.0">
+                <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="742.0" prefWidth="760.0">
                      <children>
-                        <Label layoutX="48.0" layoutY="223.0" prefHeight="46.0" prefWidth="263.0" text="Pokemons Capturados:" textFill="#333368">
+                        <Label layoutX="523.0" layoutY="255.0" prefHeight="46.0" prefWidth="214.0" text="Insignias:" textFill="#333368" AnchorPane.topAnchor="255.0">
                            <font>
                               <Font name="Palatino Linotype" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="nPokCapt" layoutX="305.0" layoutY="231.0" text="00" textFill="#eb5a5a">
+                        <Label layoutX="651.0" layoutY="264.0" prefHeight="31.0" prefWidth="40.0" text="/8" textFill="#eb5a5a" AnchorPane.topAnchor="264.0">
                            <font>
                               <Font name="Palatino Linotype" size="24.0" />
                            </font>
                         </Label>
-                        <Label layoutX="48.0" layoutY="261.0" prefHeight="46.0" prefWidth="214.0" text="Batalhas Feitas:" textFill="#333368">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="nBatFeitas" layoutX="220.0" layoutY="269.0" text="00" textFill="#eb5a5a">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="299.0" prefHeight="46.0" prefWidth="214.0" text="Vitórias:" textFill="#333368">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="nVit" layoutX="147.0" layoutY="307.0" text="00" textFill="#eb5a5a">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="337.0" prefHeight="46.0" prefWidth="214.0" text="Derrotas:" textFill="#333368">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="nDer" layoutX="159.0" layoutY="345.0" prefHeight="31.0" prefWidth="40.0" text="00" textFill="#eb5a5a">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="48.0" layoutY="375.0" prefHeight="46.0" prefWidth="214.0" text="Fugas:" textFill="#333368">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="nFugas" layoutX="131.0" layoutY="383.0" text="00" textFill="#eb5a5a">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="519.0" layoutY="223.0" prefHeight="46.0" prefWidth="263.0" text="Insignias:" textFill="#333368">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label layoutX="640.0" layoutY="231.0" prefHeight="31.0" prefWidth="40.0" text="/8" textFill="#eb5a5a">
-                           <font>
-                              <Font name="Palatino Linotype" size="24.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="nInsignias" layoutX="628.0" layoutY="229.0" prefHeight="35.0" prefWidth="24.0" text="0" textFill="#e86a6a">
+                        <Label fx:id="nInsignias" layoutX="637.0" layoutY="262.0" prefHeight="35.0" prefWidth="24.0" text="0" textFill="#e86a6a" AnchorPane.topAnchor="262.0">
                            <font>
                               <Font size="24.0" />
                            </font>
                         </Label>
-                        <GridPane layoutX="317.0" layoutY="323.0" prefHeight="233.0" prefWidth="510.0">
+                        <GridPane layoutX="420.0" layoutY="324.0" prefHeight="387.0" prefWidth="354.0">
                           <columnConstraints>
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="236.0" minWidth="10.0" prefWidth="113.33334350585938" />
-                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="134.66665649414062" minWidth="0.0" prefWidth="134.66665649414062" />
                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                           <rowConstraints>
                             <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
+                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../images/perfil/Rectangle%20212.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="64.0" fitWidth="59.35" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../images/perfil/badges-amarelo%201.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/perfil/Rectangle%20213.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="65.77" fitWidth="57.91" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/perfil/badges-azul%201.png" />
+                                 </image>
+                              </ImageView>
                               <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="64.0" fitWidth="59.35" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="88.0" fitWidth="76.12" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/perfil/badges-amarelo%201.png" />
+                                    <Image url="@../images/perfil/badges-removebg-preview%20(1)%201.png" />
                                  </image>
                               </ImageView>
                               <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
@@ -158,39 +134,39 @@
                                     <Image url="@../images/perfil/Rectangle%20213.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="65.77" fitWidth="57.91" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
-                                 <image>
-                                    <Image url="@../images/perfil/badges-azul%201.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-                                 <image>
-                                    <Image url="@../images/perfil/Rectangle%20212.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="88.0" fitWidth="76.12" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-                                 <image>
-                                    <Image url="@../images/perfil/badges-removebg-preview%20(1)%201.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
-                                 <image>
-                                    <Image url="@../images/perfil/Rectangle%20213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                              <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-rosa%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20215.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="76.0" fitWidth="80.27" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fitHeight="76.0" fitWidth="80.27" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-lgbt%201.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/perfil/Rectangle%20212.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="79.44" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/perfil/badges-red%201.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../images/perfil/Rectangle%20213.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../images/perfil/badges-verde%201.png" />
                                  </image>
                               </ImageView>
                               <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -198,67 +174,619 @@
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="79.44" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <image>
-                                    <Image url="@../images/perfil/badges-red%201.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <image>
-                                    <Image url="@../images/perfil/Rectangle%20213.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                 <image>
-                                    <Image url="@../images/perfil/badges-verde%201.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="86.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
-                                 <image>
-                                    <Image url="@../images/perfil/Rectangle%20212.png" />
-                                 </image>
-                              </ImageView>
-                              <ImageView fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <ImageView fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-removebg-preview%201.png" />
                                  </image>
                               </ImageView>
                            </children>
                         </GridPane>
-                     </children>
-                </AnchorPane>
-                  <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0">
-                    <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                        <AnchorPane layoutX="25.0" layoutY="152.0" prefHeight="414.0" prefWidth="334.0">
                            <children>
-                              <ScrollPane prefHeight="743.0" prefWidth="437.0">
-                                 <content>
-                                    <AnchorPane prefHeight="1021.0" prefWidth="433.0">
-                                       <children>
-                                          <Pane layoutX="26.0" layoutY="20.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #8CDDCA;" />
-                                          <Pane layoutX="169.0" layoutY="20.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #F7A1A1;" />
-                                          <Pane layoutX="169.0" layoutY="186.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #F7A1A1;" />
-                                          <Pane layoutX="169.0" layoutY="347.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #F7A1A1;" />
-                                          <Pane layoutX="169.0" layoutY="509.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #F7A1A1;" />
-                                          <Pane layoutX="26.0" layoutY="186.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #8CDDCA;" />
-                                          <Pane layoutX="26.0" layoutY="347.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #8CDDCA;" />
-                                          <Pane layoutX="26.0" layoutY="509.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #8CDDCA;" />
-                                          <Pane layoutX="302.0" layoutY="509.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #A6D0F4;" />
-                                          <Pane layoutX="302.0" layoutY="347.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #A6D0F4;" />
-                                          <Pane layoutX="302.0" layoutY="186.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #A6D0F4;" />
-                                          <Pane layoutX="302.0" layoutY="20.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #A6D0F4;" />
-                                          <Pane layoutX="26.0" layoutY="670.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #8CDDCA;" />
-                                          <Pane layoutX="169.0" layoutY="670.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #F7A1A1;" />
-                                          <Pane layoutX="302.0" layoutY="670.0" prefHeight="132.0" prefWidth="99.0" style="-fx-background-color: #A6D0F4;" />
-                                       </children>
-                                    </AnchorPane>
-                                 </content>
-                              </ScrollPane>
+                              <Label layoutY="103.0" prefHeight="46.0" prefWidth="399.0" text="Pokemons Capturados:" textFill="#333368" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="103.0">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nPokCapt" layoutX="257.0" layoutY="113.0" text="00" textFill="#eb5a5a">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutY="156.0" prefHeight="46.0" prefWidth="214.0" text="Batalhas Feitas:" textFill="#333368" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="156.0">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nBatFeitas" layoutX="174.0" layoutY="167.0" text="00" textFill="#eb5a5a">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutY="209.0" prefHeight="46.0" prefWidth="214.0" text="Vitórias:" textFill="#333368">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nVit" layoutX="97.0" layoutY="218.0" text="00" textFill="#eb5a5a">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutY="259.0" prefHeight="46.0" prefWidth="214.0" text="Derrotas:" textFill="#333368">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nDer" layoutX="105.0" layoutY="268.0" prefHeight="31.0" prefWidth="40.0" text="00" textFill="#eb5a5a">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="-1.0" layoutY="308.0" prefHeight="46.0" prefWidth="214.0" text="Fugas:" textFill="#333368">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="nFugas" layoutX="76.0" layoutY="318.0" text="00" textFill="#eb5a5a">
+                                 <font>
+                                    <Font name="Palatino Linotype" size="24.0" />
+                                 </font>
+                              </Label>
                            </children>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-                    </items>
-                  </SplitPane>
+                     </children>
+                </AnchorPane>
+                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Pokemons Capturados">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <ScrollPane prefHeight="716.0" prefWidth="448.0">
+                                       <content>
+                                          <GridPane prefHeight="1240.0" prefWidth="436.0" style="-fx-background-color: #cdcdcd;">
+                                            <columnConstraints>
+                                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" layoutX="169.0" layoutY="20.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.2862745225429535" green="0.8156862854957581" blue="0.6901960968971252" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.9843137264251709" green="0.4274509847164154" blue="0.42352941632270813" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.4588235318660736" green="0.7333333492279053" blue="0.9686274528503418" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <ImageView fitHeight="102.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../images/perfil/image%204.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <ImageView fitHeight="102.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                                                   <image>
+                                                      <Image url="@../images/perfil/image%205.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <ImageView fitHeight="102.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                                   <image>
+                                                      <Image url="@../images/perfil/image%206.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="1">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="2">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="3">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="4">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="5">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="6">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="7">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                                   <fill>
+                                                      <LinearGradient endX="1.0" endY="1.0">
+                                                         <stops>
+                                                            <Stop>
+                                                               <color>
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                               </color>
+                                                            </Stop>
+                                                            <Stop offset="1.0">
+                                                               <color>
+                                                                  <Color red="1.0" green="1.0" blue="1.0" />
+                                                               </color>
+                                                            </Stop>
+                                                         </stops>
+                                                      </LinearGradient>
+                                                   </fill>
+                                                </Rectangle>
+                                             </children>
+                                          </GridPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="Treinadores">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #cdcdcd;">
+                                 <children>
+                                    <GridPane layoutY="11.0" prefHeight="1272.0" prefWidth="488.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="218.0" />
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="218.0" GridPane.rowIndex="1" />
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="218.0" GridPane.columnIndex="1" />
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="218.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbbb7" height="51.0" opacity="0.59" stroke="RED" strokeType="INSIDE" width="218.0" GridPane.rowIndex="2" />
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Palmeirinha" textAlignment="CENTER" wrappingWidth="190.015625">
+                                             <font>
+                                                <Font name="Palatino Linotype" size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kelviskilveszin" textAlignment="CENTER" wrappingWidth="204.5709228515625" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font name="Palatino Linotype" size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Njordinho" textAlignment="CENTER" wrappingWidth="190.0103759765625" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Palatino Linotype" size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Luvinhas" textAlignment="CENTER" wrappingWidth="189.0794677734375" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font name="Palatino Linotype" size="30.0" />
+                                             </font>
+                                          </Text>
+                                          <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vermelhinho" textAlignment="CENTER" wrappingWidth="188.79034423828125" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font name="Palatino Linotype" size="30.0" />
+                                             </font>
+                                          </Text>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
                </items>
             </SplitPane>
          </children>
