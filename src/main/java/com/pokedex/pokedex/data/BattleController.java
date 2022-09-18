@@ -1,8 +1,17 @@
 package com.pokedex.pokedex.data;
 
+import java.io.IOException;
+
+import com.pokedex.pokedex.App;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import javafx.scene.Node;
 
 public class BattleController {
 
@@ -75,8 +84,13 @@ public class BattleController {
     }
 
     @FXML
-    void sair(ActionEvent event) {
-
+    void sair(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
+        Scene tela = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Perfil");
+        stage.setScene(tela);
+        stage.show();
     }
 
 }
