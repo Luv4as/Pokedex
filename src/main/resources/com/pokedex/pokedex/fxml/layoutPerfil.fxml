@@ -40,6 +40,7 @@
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -243,9 +244,9 @@
                         <content>
                           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                  <children>
-                                    <ScrollPane prefHeight="716.0" prefWidth="448.0">
+                                    <ScrollPane layoutY="6.0" prefHeight="710.0" prefWidth="500.0">
                                        <content>
-                                          <GridPane prefHeight="1240.0" prefWidth="436.0" style="-fx-background-color: #cdcdcd;">
+                                          <GridPane prefHeight="1369.0" prefWidth="484.0" style="-fx-background-color: #cdcdcd;">
                                             <columnConstraints>
                                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                                                 <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -262,7 +263,7 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" layoutX="169.0" layoutY="20.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" layoutX="169.0" layoutY="20.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -280,7 +281,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -298,7 +299,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -316,22 +317,31 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <ImageView fitHeight="102.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
                                                       <Image url="@../images/perfil/image%204.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
-                                                <ImageView fitHeight="102.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                                                <ImageView fitHeight="115.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                                                    <image>
                                                       <Image url="@../images/perfil/image%205.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
-                                                <ImageView fitHeight="102.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
                                                    <image>
                                                       <Image url="@../images/perfil/image%206.png" />
                                                    </image>
+                                                   <effect>
+                                                      <DropShadow />
+                                                   </effect>
                                                 </ImageView>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="1">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="1">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -349,7 +359,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -367,7 +377,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -385,7 +395,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="2">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="2">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -403,7 +413,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -421,7 +431,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -439,7 +449,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="3">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="3">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -457,7 +467,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -475,7 +485,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -493,7 +503,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="4">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="4">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -511,7 +521,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -529,7 +539,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -547,7 +557,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="5">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="5">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -565,7 +575,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -583,7 +593,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -601,7 +611,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="6">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="6">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -619,7 +629,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -637,7 +647,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -655,7 +665,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.rowIndex="7">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="7">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -673,7 +683,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -691,7 +701,7 @@
                                                       </LinearGradient>
                                                    </fill>
                                                 </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="99.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
@@ -717,14 +727,14 @@
                               </AnchorPane>
                         </content>
                       </Tab>
-                      <Tab text="Treinadores">
+                      <Tab text="Treinadores Pokemon">
                         <content>
-                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #cdcdcd;">
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="700.0" prefWidth="499.0">
                                  <children>
-                                    <GridPane layoutY="11.0" prefHeight="1272.0" prefWidth="488.0">
+                                    <GridPane layoutY="5.0" prefHeight="1311.0" prefWidth="499.0" style="-fx-background-color: #cdcdcd;">
                                       <columnConstraints>
-                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="244.0" />
+                                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="244.0" minWidth="10.0" prefWidth="244.0" />
                                       </columnConstraints>
                                       <rowConstraints>
                                           <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
