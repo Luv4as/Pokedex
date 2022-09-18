@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.pokedex.pokedex.data.PokedexController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.data.PokedexController">
    <children>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
@@ -86,7 +86,7 @@
                            <children>
                               <ImageView fitHeight="102.0" fitWidth="89.0" layoutX="5.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../../../../venancio/Pokedex/src/main/resources/com/pokedex/pokedex/images/Bulbasauro.png" />
+                                    <Image url="@../images/pokedex/Bulbasauro.png" />
                                  </image>
                               </ImageView>
                               <Label layoutX="18.0" layoutY="102.0" prefHeight="33.0" prefWidth="67.0" text="Bulbasauro" textFill="#304d46" />
