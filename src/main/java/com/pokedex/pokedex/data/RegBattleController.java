@@ -10,11 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class PerfilController {
+public class RegBattleController {
 
     @FXML
     private Button btPerfil;
@@ -26,32 +25,26 @@ public class PerfilController {
     private Button btRegBattle;
 
     @FXML
-    private Button btSwitchPKC;
+    private Button btRegistro;
 
     @FXML
-    private Button btSwitchTRN;
+    void adicionarRegistro(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutBattle.fxml"));
+        Scene tela = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Battle");
+        stage.setScene(tela);
+        stage.show();
+    }
 
     @FXML
-    private Label nBatFeitas;
-
-    @FXML
-    private Label nDer;
-
-    @FXML
-    private Label nFugas;
-
-    @FXML
-    private Label nInsignias;
-
-    @FXML
-    private Label nPokCapt;
-
-    @FXML
-    private Label nVit;
-
-    @FXML
-    void change(ActionEvent event) {
-
+    void changeToPerfil(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutPerfil.fxml"));
+        Scene tela = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Perfil");
+        stage.setScene(tela);
+        stage.show();
     }
 
     @FXML
@@ -60,16 +53,6 @@ public class PerfilController {
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setTitle("Pokedex");
-        stage.setScene(tela);
-        stage.show();
-    }
-
-    @FXML
-    void changeToRegBattle(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
-        Scene tela = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Registro de Batalhas");
         stage.setScene(tela);
         stage.show();
     }

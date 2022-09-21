@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.pokedex.pokedex.data.PokedexController">
+   <children>
+      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ToolBar nodeOrientation="LEFT_TO_RIGHT" opacity="0.75" prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: EF4036;">
+               <items>
+                  <Button fx:id="btPerfil" alignment="CENTER" mnemonicParsing="false" onAction="#changeToPerfil" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
+                  <Button fx:id="btPokedex" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;">
+                     <effect>
+                        <DropShadow />
+                     </effect></Button>
+                  <Button fx:id="btRegBattle" alignment="CENTER" mnemonicParsing="false" onAction="#changeToRegBattle" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
+               </items>
+               <padding>
+                  <Insets left="576.0" />
+               </padding>
+            </ToolBar>
+            <SplitPane dividerPositions="0.63" layoutY="60.0" prefHeight="741.0" prefWidth="1280.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="773.0" prefWidth="360.0" style="-fx-background-color: #F0F0F0;">
+                     <children>
+                        <Label layoutX="29.0" layoutY="27.0" prefHeight="47.0" prefWidth="198.0" text="Movimentos" textFill="#8cddca">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <ScrollPane layoutX="32.0" layoutY="80.0" prefHeight="366.0" prefWidth="290.0">
+                           <content>
+                              <GridPane prefHeight="640.0" prefWidth="272.0" style="-fx-background-color: CDCDCD;">
+                                 <columnConstraints>
+                                    <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="88.0" stroke="BLACK" strokeType="INSIDE" width="267.0">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.6184210777282715" green="0.6184210777282715" blue="0.6184210777282715" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Rectangle>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="88.0" stroke="BLACK" strokeType="INSIDE" width="267.0" GridPane.rowIndex="1">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.6184210777282715" green="0.6184210777282715" blue="0.6184210777282715" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Rectangle>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="88.0" stroke="BLACK" strokeType="INSIDE" width="267.0" GridPane.rowIndex="3">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.6184210777282715" green="0.6184210777282715" blue="0.6184210777282715" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Rectangle>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" height="88.0" stroke="BLACK" strokeType="INSIDE" width="267.0" GridPane.rowIndex="2">
+                                       <fill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop>
+                                                   <color>
+                                                      <Color red="0.6424000263214111" green="0.8324800133705139" blue="0.8799999952316284" />
+                                                   </color>
+                                                </Stop>
+                                                <Stop offset="1.0">
+                                                   <color>
+                                                      <Color red="0.6100000143051147" green="0.6100000143051147" blue="0.6100000143051147" />
+                                                   </color>
+                                                </Stop>
+                                             </stops>
+                                          </LinearGradient>
+                                       </fill>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Rectangle>
+                                    <Label prefHeight="78.0" prefWidth="257.0" text="TACKLE" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold Italic" size="34.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label prefHeight="78.0" prefWidth="257.0" text="GROWL" textFill="WHITE" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold Italic" size="34.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label prefHeight="78.0" prefWidth="257.0" text="VINE WHIP" textFill="WHITE" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold Italic" size="34.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                    <Label prefHeight="78.0" prefWidth="257.0" text="GROWTH" textFill="WHITE" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold Italic" size="34.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </GridPane>
+                           </content>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ScrollPane>
+                        <Label layoutX="30.0" layoutY="497.0" text="Evoluções" textFill="#8cddca">
+                           <font>
+                              <Font name="System Bold" size="32.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <Pane layoutX="37.0" layoutY="551.0" prefHeight="132.0" prefWidth="314.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="132.0" layoutX="-8.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="314.0">
+                                 <fill>
+                                    <RadialGradient centerX="0.5441988950276243" centerY="0.504739336492891" radius="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.5490196347236633" green="0.8666666746139526" blue="0.7921568751335144" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </RadialGradient>
+                                 </fill>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="204.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="89.0">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.4284000098705292" green="0.8399999737739563" blue="0.7371000051498413" opacity="0.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.4284000098705292" green="0.8399999737739563" blue="0.7371000051498413" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="105.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="89.0">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.4284000098705292" green="0.8399999737739563" blue="0.7371000051498413" opacity="0.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.4284000098705292" green="0.8399999737739563" blue="0.7371000051498413" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="84.0" layoutX="6.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="89.0">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.4284000098705292" green="0.8399999737739563" blue="0.7371000051498413" opacity="0.0" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="0.4284000098705292" green="0.8399999737739563" blue="0.7371000051498413" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </Rectangle>
+                           </children>
+                        </Pane>
+                        <Label layoutX="521.0" layoutY="186.0" prefHeight="47.0" prefWidth="72.0" style="-fx-background-color: #8CDDCA;" text=" Grass" textFill="WHITE" textOverrun="CLIP">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                        <ImageView fitHeight="25.0" fitWidth="80.0" layoutX="755.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pokedex/Vector.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="btAddPokemon" layoutX="743.0" layoutY="22.0" mnemonicParsing="false" opacity="0.0" prefHeight="33.0" prefWidth="49.0" text="Button" />
+                        <ImageView fitHeight="246.0" fitWidth="233.0" layoutX="446.0" layoutY="254.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/pokedex/Bulbasauro.png" />
+                           </image>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </ImageView>
+                        <Label layoutX="433.0" layoutY="489.0" prefHeight="66.0" prefWidth="265.0" text="Bulbasauro" textAlignment="CENTER" textFill="#8cddca" underline="true">
+                           <font>
+                              <Font name="Palatino Linotype Bold Italic" size="47.0" />
+                           </font>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Label>
+                     </children></AnchorPane>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <GridPane prefHeight="722.0" prefWidth="6000.0" style="-fx-background-color: #cdcdcd;">
+                          <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.2862745225429535" green="0.8156862854957581" blue="0.6901960968971252" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.9843137264251709" green="0.4274509847164154" blue="0.42352941632270813" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.4588235318660736" green="0.7333333492279053" blue="0.9686274528503418" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="1">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="3">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="2">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="3">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/perfil/image%204.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="115.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+                                 <image>
+                                    <Image url="@../images/perfil/image%205.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
+                                 <image>
+                                    <Image url="@../images/perfil/image%206.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="4">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <fill>
+                                    <LinearGradient endX="1.0" endY="1.0">
+                                       <stops>
+                                          <Stop>
+                                             <color>
+                                                <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
+                                             </color>
+                                          </Stop>
+                                          <Stop offset="1.0">
+                                             <color>
+                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                             </color>
+                                          </Stop>
+                                       </stops>
+                                    </LinearGradient>
+                                 </fill>
+                              </Rectangle>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="100.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../images/pokedex/ditto.png" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                           </children>
+                        </GridPane>
+                     </content>
+                  </ScrollPane>
+               </items>
+            </SplitPane>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
