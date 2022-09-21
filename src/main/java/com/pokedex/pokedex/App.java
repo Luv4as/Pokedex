@@ -23,5 +23,4 @@ public class App extends Application {
         primaryStage.setResizable(false);
 
     }
-
 }
