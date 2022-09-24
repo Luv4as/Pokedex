@@ -24,7 +24,6 @@ public class PokedexController {
     @FXML
     private Button btRegBattle;
 
-
     @FXML
     void changeToPerfil(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutPerfil.fxml"));
@@ -48,5 +47,30 @@ public class PokedexController {
         stage.setScene(tela);
         stage.show();
     }
+    void initialize() {
 
+    }
+
+    final String IDLE_BUTTON_STYLE = "-fx-background-color: #F0AAA6; -fx-background-radius: 10px;";
+    final String HOVERED_BUTTON_STYLE = "-fx-background-color: #FA7B7B; -fx-background-radius: 10px;";
+
+    @FXML
+    void addHover1() {
+        btPerfil.setStyle(HOVERED_BUTTON_STYLE);
+    }
+
+    @FXML
+    void removeHover1() {
+        btPerfil.setStyle(IDLE_BUTTON_STYLE);
+    }
+
+    @FXML
+    void addHover2() {
+        btRegBattle.setStyle(HOVERED_BUTTON_STYLE);
+    }
+
+    @FXML
+    void removeHover2() {
+        btRegBattle.setStyle(IDLE_BUTTON_STYLE);
+    }
 }
