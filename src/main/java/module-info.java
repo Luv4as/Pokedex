@@ -2,7 +2,6 @@ module com.pokedex.pokedex {
     requires transitive javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
-
     requires firebase.admin;
     requires com.google.auth.oauth2;
     requires com.google.auth;
