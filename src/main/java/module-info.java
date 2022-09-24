@@ -3,6 +3,9 @@ module com.pokedex.pokedex {
     requires javafx.controls;
     requires javafx.fxml;
 
+    requires retrofit2;
+    requires retrofit2.converter.gson;
+    requires google.api.client.gson;
     requires firebase.admin;
     requires com.google.auth.oauth2;
     requires com.google.auth;
