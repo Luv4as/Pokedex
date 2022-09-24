@@ -30,6 +30,8 @@ public class PokedexController {
         Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutPerfil.fxml"));
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        String css = App.class.getResource("css/layoutPerfil.css").toExternalForm();
+        root.getStylesheets().add(css);
         stage.setTitle("Perfil");
         stage.setScene(tela);
         stage.show();
@@ -40,6 +42,8 @@ public class PokedexController {
         Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        String css = App.class.getResource("css/layoutRegBattle.css").toExternalForm();
+        root.getStylesheets().add(css);
         stage.setTitle("Registro de Batalhas");
         stage.setScene(tela);
         stage.show();
