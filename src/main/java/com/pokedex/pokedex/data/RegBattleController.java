@@ -61,4 +61,26 @@ public class RegBattleController {
         stage.show();
     }
 
+    final String IDLE_BUTTON_STYLE = "-fx-background-color: #F0AAA6; -fx-background-radius: 10px;";
+    final String HOVERED_BUTTON_STYLE = "-fx-background-color: #FA7B7B; -fx-background-radius: 10px;";
+    @FXML
+    void addHover1() {
+        btPerfil.setStyle(HOVERED_BUTTON_STYLE);
+    }
+
+    @FXML
+    void removeHover1() {
+        btPerfil.setStyle(IDLE_BUTTON_STYLE);
+    }
+
+    @FXML
+    void addHover2() {
+        btPokedex.setStyle(HOVERED_BUTTON_STYLE);
+    }
+
+    @FXML
+    void removeHover2() {
+        btPokedex.setStyle(IDLE_BUTTON_STYLE);
+    }
+
 }
