@@ -14,32 +14,19 @@ import javafx.stage.Stage;
 public class App extends Application {
 
     public static void main(String[] args) throws Exception {
-        FirebaseInstance.init();
-        DatabaseInstance.Set("22", "2");
+//        FirebaseInstance.init();
+//        DatabaseInstance.Set("22", "2");
         launch(args);
     }
 
     @Override
-
-
     public void start(Stage primaryStage) throws Exception {
-
-                //Tela login
-        FXMLLoader loader = new FXMLLoader(App.class.getResource("adilson_fabiano/filho_de_adilson_fabianio.json"));
+        //Tela login
+        FXMLLoader loader = new FXMLLoader(App.class.getResource("fxml/layoutLogin.fxml"));
         Parent root = loader.load();
-        String css = App.class.getResource("css/layoutPerfil.css").toExternalForm();
         primaryStage.setScene(new Scene(root));
-        root.getStylesheets().add(css);
         primaryStage.show();
         primaryStage.setResizable(false);
-
-//        //Tela login
-//        FXMLLoader loader = new FXMLLoader(App.class.getResource("fxml/layoutLogin.fxml"));
-//        Parent root = loader.load();
-//        primaryStage.setScene(new Scene(root));
-//        primaryStage.show();
-//        primaryStage.setResizable(false);
-
     }
 
 }

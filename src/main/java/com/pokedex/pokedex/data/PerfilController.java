@@ -59,6 +59,8 @@ public class PerfilController {
         Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutPokedex.fxml"));
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        String css = App.class.getResource("css/layoutPokedex.css").toExternalForm();
+        root.getStylesheets().add(css);
         stage.setTitle("Pokedex");
         stage.setScene(tela);
         stage.show();
@@ -69,6 +71,8 @@ public class PerfilController {
         Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        String css = App.class.getResource("css/layoutRegBattle.css").toExternalForm();
+        root.getStylesheets().add(css);
         stage.setTitle("Registro de Batalhas");
         stage.setScene(tela);
         stage.show();
