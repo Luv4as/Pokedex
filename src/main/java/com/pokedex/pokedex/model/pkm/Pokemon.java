@@ -1,31 +1,25 @@
 package com.pokedex.pokedex.model.pkm;
 
-import com.pokedex.pokedex.enums.PokemonGames;
-import com.pokedex.pokedex.enums.PokemonType;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class Pokemon {
+    @SerializedName("id")
     private int id;
     @SerializedName("name")
     private String name;
-    private String description;
     @SerializedName("types")
-    private List<PokemonType> type;
-    @SerializedName("game_indices")
-    private List<PokemonGames> availableInGames;
+    private List<PokemonTypeApi> type;
     @SerializedName("moves")
-    private List<PokemonMovement> allMovements;
+    private List<PokemonMovementApi> allMovements;
     private List<Pokemon> evolutions;
     private int evolutionLevel;
 
-    public Pokemon(int id, String name, String description, List<PokemonType> type, List<PokemonGames> availableInGames, List<PokemonMovement> allMovements, List<Pokemon> evolutions, int evolutionLevel) {
+    public Pokemon(int id, String name, List<PokemonTypeApi> type, List<PokemonMovementApi> allMovements, List<Pokemon> evolutions, int evolutionLevel) {
         this.id = id;
         this.name = name;
-        this.description = description;
         this.type = type;
-        this.availableInGames = availableInGames;
         this.allMovements = allMovements;
         this.evolutions = evolutions;
         this.evolutionLevel = evolutionLevel;
@@ -47,35 +41,19 @@ public class Pokemon {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public List<PokemonType> getType() {
+    public List<PokemonTypeApi> getType() {
         return type;
     }
 
-    public void setType(List<PokemonType> type) {
+    public void setType(List<PokemonTypeApi> type) {
         this.type = type;
     }
 
-    public List<PokemonGames> getAvailableInGames() {
-        return availableInGames;
-    }
-
-    public void setAvailableInGames(List<PokemonGames> availableInGames) {
-        this.availableInGames = availableInGames;
-    }
-
-    public List<PokemonMovement> getAllMovements() {
+    public List<PokemonMovementApi> getAllMovements() {
         return allMovements;
     }
 
-    public void setAllMovements(List<PokemonMovement> allMovements) {
+    public void setAllMovements(List<PokemonMovementApi> allMovements) {
         this.allMovements = allMovements;
     }
 

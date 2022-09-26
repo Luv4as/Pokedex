@@ -1,7 +1,5 @@
 package com.pokedex.pokedex.model.pkm;
 
-import com.pokedex.pokedex.enums.PokemonGames;
-
 import java.time.LocalDate;
 import java.util.List;
 
@@ -11,15 +9,13 @@ public class CapturedPokemon {
     private PokemonItem item;
     private int level;
     private List<PokemonMovement> learnedMovements;
-    private List<PokemonGames> capturedInGames;
 
-    CapturedPokemon(Pokemon basePokemon, LocalDate captureDate, PokemonItem item, int level, List<PokemonMovement> learnedMovements, List<PokemonGames> capturedInGames) {
+    CapturedPokemon(Pokemon basePokemon, LocalDate captureDate, PokemonItem item, int level, List<PokemonMovement> learnedMovements) {
         this.basePokemon = basePokemon;
         this.captureDate = captureDate;
         this.item = item;
         this.level = level;
         this.learnedMovements = learnedMovements;
-        this.capturedInGames = capturedInGames;
     }
 
     public Pokemon getBasePokemon() {
@@ -60,13 +56,5 @@ public class CapturedPokemon {
 
     public void setLearnedMovements(List<PokemonMovement> learnedMovements) {
         this.learnedMovements = learnedMovements;
-    }
-
-    public List<PokemonGames> getCapturedInGames() {
-        return capturedInGames;
-    }
-
-    public void setCapturedInGames(List<PokemonGames> capturedInGames) {
-        this.capturedInGames = capturedInGames;
     }
 }

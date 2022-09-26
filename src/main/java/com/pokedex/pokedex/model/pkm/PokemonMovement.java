@@ -1,29 +1,34 @@
 package com.pokedex.pokedex.model.pkm;
 
-import com.pokedex.pokedex.enums.MovementCategory;
-import com.pokedex.pokedex.enums.PokemonType;
+import com.google.gson.annotations.SerializedName;
+import com.pokedex.pokedex.api.ApiClient;
+import com.pokedex.pokedex.api.ApiInterface;
 
 public class PokemonMovement {
     private String name;
-    private String description;
+    @SerializedName("type")
     private PokemonType type;
+    @SerializedName("pp")
     private int pp;
-    private MovementCategory category;
+    @SerializedName("power")
     private int power;
+    @SerializedName("accuracy")
     private int accuracy;
-    private boolean makesContact;
-    private boolean isHm;
 
-    public PokemonMovement(String name, String description, PokemonType type, int pp, MovementCategory category, int power, int accuracy, boolean makesContact, boolean isHm) {
+    public PokemonMovement(String name) {
         this.name = name;
-        this.description = description;
-        this.type = type;
-        this.pp = pp;
-        this.category = category;
-        this.power = power;
-        this.accuracy = accuracy;
-        this.makesContact = makesContact;
-        this.isHm = isHm;
+
+        ApiInterface api = ApiClient.getClient().create(ApiInterface.class);
+        try {
+            PokemonMovement response = api.getMoveDetails(this.name).execute().body();
+            System.out.println(response.getType());
+            this.type = response.getType();
+            this.pp = response.getPp();
+            this.power = response.getPower();
+            this.accuracy = response.getAccuracy();
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
     }
 
     public String getName() {
@@ -32,14 +37,6 @@ public class PokemonMovement {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public PokemonType getType() {
@@ -58,14 +55,6 @@ public class PokemonMovement {
         this.pp = pp;
     }
 
-    public MovementCategory getCategory() {
-        return category;
-    }
-
-    public void setCategory(MovementCategory category) {
-        this.category = category;
-    }
-
     public int getPower() {
         return power;
     }
@@ -82,19 +71,4 @@ public class PokemonMovement {
         this.accuracy = accuracy;
     }
 
-    public boolean isMakesContact() {
-        return makesContact;
-    }
-
-    public void setMakesContact(boolean makesContact) {
-        this.makesContact = makesContact;
-    }
-
-    public boolean isHm() {
-        return isHm;
-    }
-
-    public void setHm(boolean hm) {
-        isHm = hm;
-    }
 }
