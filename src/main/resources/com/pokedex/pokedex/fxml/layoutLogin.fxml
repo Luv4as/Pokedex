@@ -58,7 +58,6 @@
                   <Image url="@../images/login/ImageGoogle.png" />
                </image>
             </ImageView>
-             <Label fx:id="aa">asfasasafsaf</Label>
             <Button fx:id="btLogin" layoutX="488.0" layoutY="452.0" mnemonicParsing="false" onAction="#logar" opacity="0.0" prefHeight="50.0" prefWidth="304.0" />
          </children>
     </AnchorPane>

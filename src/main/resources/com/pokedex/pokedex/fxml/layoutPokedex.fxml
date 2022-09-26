@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -22,28 +23,70 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.pokedex.pokedex.data.PokedexController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.data.PokedexController">
    <children>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ToolBar nodeOrientation="LEFT_TO_RIGHT" opacity="0.75" prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: EF4036;">
+            <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: EF4036;">
                <items>
-                  <Button fx:id="btPerfil" alignment="CENTER" mnemonicParsing="false" onAction="#changeToPerfil" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-                  <Button fx:id="btPokedex" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;">
+                  <Button fx:id="btPerfil" alignment="CENTER" mnemonicParsing="false" onAction="#changeToPerfil" onMouseEntered="#addHover1" onMouseExited="#removeHover1" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: F0AAA6; -fx-background-radius: 10px;" translateX="-32.0">
                      <effect>
                         <DropShadow />
-                     </effect></Button>
-                  <Button fx:id="btRegBattle" alignment="CENTER" mnemonicParsing="false" onAction="#changeToRegBattle" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/profileIconD.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btPokedex" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10px;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/pokebolaIconE.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btRegBattle" alignment="CENTER" mnemonicParsing="false" onAction="#changeToRegBattle" onMouseEntered="#addHover2" onMouseExited="#removeHover2" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: F0AAA6; -fx-background-radius: 10px;" translateX="32.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                          <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets right="30.0" top="30.0" />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/swordIconD.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
                </items>
                <padding>
                   <Insets left="576.0" />
                </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </ToolBar>
             <SplitPane dividerPositions="0.63" layoutY="60.0" prefHeight="741.0" prefWidth="1280.0">
                <items>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="773.0" prefWidth="360.0" style="-fx-background-color: #F0F0F0;">
                      <children>
-                        <Label layoutX="29.0" layoutY="27.0" prefHeight="47.0" prefWidth="198.0" text="Movimentos" textFill="#8cddca">
+                        <Label fx:id="aa" layoutX="29.0" layoutY="27.0" prefHeight="47.0" prefWidth="198.0" text="Movimentos">
                            <font>
                               <Font name="System Bold" size="32.0" />
                            </font>
@@ -318,7 +361,7 @@
                      </children></AnchorPane>
                   <ScrollPane prefHeight="200.0" prefWidth="200.0">
                      <content>
-                        <GridPane prefHeight="722.0" prefWidth="6000.0" style="-fx-background-color: #cdcdcd;">
+                        <GridPane fx:id="grid" prefHeight="722.0" prefWidth="6000.0" style="-fx-background-color: #cdcdcd;">
                           <columnConstraints>
                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

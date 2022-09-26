@@ -24,12 +24,13 @@ public class PokedexController {
     @FXML
     private Button btRegBattle;
 
-
     @FXML
     void changeToPerfil(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutPerfil.fxml"));
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        String css = App.class.getResource("css/layoutPerfil.css").toExternalForm();
+        root.getStylesheets().add(css);
         stage.setTitle("Perfil");
         stage.setScene(tela);
         stage.show();
@@ -40,9 +41,38 @@ public class PokedexController {
         Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        String css = App.class.getResource("css/layoutRegBattle.css").toExternalForm();
+        root.getStylesheets().add(css);
         stage.setTitle("Registro de Batalhas");
         stage.setScene(tela);
         stage.show();
     }
+    void initialize() {
 
+    }
+
+    final String IDLE_BUTTON_STYLE = "-fx-background-color: #F0AAA6; -fx-background-radius: 10px;";
+    final String HOVERED_BUTTON_STYLE = "-fx-background-color: #FA7B7B; -fx-background-radius: 10px;";
+
+    @FXML
+    void addHover1() {
+        btPerfil.setStyle(HOVERED_BUTTON_STYLE);
+    }
+
+    @FXML
+    void removeHover1() {
+        btPerfil.setStyle(IDLE_BUTTON_STYLE);
+    }
+
+    @FXML
+    void addHover2() {
+        btRegBattle.setStyle(HOVERED_BUTTON_STYLE);
+    }
+
+    @FXML
+    void removeHover2() {
+        btRegBattle.setStyle(IDLE_BUTTON_STYLE);
+    }
+
+    
 }
