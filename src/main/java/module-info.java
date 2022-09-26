@@ -12,6 +12,8 @@ module com.pokedex.pokedex {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
+    requires com.google.gson;
+    requires picasso;
 
     opens com.pokedex.pokedex to javafx.fxml;
 

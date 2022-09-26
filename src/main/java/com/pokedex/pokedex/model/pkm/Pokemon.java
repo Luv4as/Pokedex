@@ -2,19 +2,26 @@ package com.pokedex.pokedex.model.pkm;
 
 import com.pokedex.pokedex.enums.PokemonGames;
 import com.pokedex.pokedex.enums.PokemonType;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class Pokemon {
+    private int id;
+    @SerializedName("name")
     private String name;
     private String description;
+    @SerializedName("types")
     private List<PokemonType> type;
+    @SerializedName("game_indices")
     private List<PokemonGames> availableInGames;
+    @SerializedName("moves")
     private List<PokemonMovement> allMovements;
     private List<Pokemon> evolutions;
     private int evolutionLevel;
 
-    public Pokemon(String name, String description, List<PokemonType> type, List<PokemonGames> availableInGames, List<PokemonMovement> allMovements, List<Pokemon> evolutions, int evolutionLevel) {
+    public Pokemon(int id, String name, String description, List<PokemonType> type, List<PokemonGames> availableInGames, List<PokemonMovement> allMovements, List<Pokemon> evolutions, int evolutionLevel) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.type = type;
@@ -22,6 +29,14 @@ public class Pokemon {
         this.allMovements = allMovements;
         this.evolutions = evolutions;
         this.evolutionLevel = evolutionLevel;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -80,3 +95,4 @@ public class Pokemon {
         this.evolutionLevel = evolutionLevel;
     }
 }
+
