@@ -2,6 +2,7 @@ module com.pokedex.pokedex {
     requires transitive javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
+
     requires retrofit2;
     requires retrofit2.converter.gson;
     requires google.api.client.gson;

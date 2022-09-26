@@ -73,4 +73,6 @@ public class PokedexController {
     void removeHover2() {
         btRegBattle.setStyle(IDLE_BUTTON_STYLE);
     }
+
+    
 }

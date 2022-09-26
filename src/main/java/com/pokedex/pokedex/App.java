@@ -1,15 +1,10 @@
 package com.pokedex.pokedex;
 
-
-import com.google.firebase.database.FirebaseDatabase;
-import com.pokedex.pokedex.firebase.DatabaseInstance;
-import com.pokedex.pokedex.firebase.FirebaseInstance;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
 
 public class App extends Application {
 

@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -26,6 +27,9 @@ public class RegBattleController {
 
     @FXML
     private Button btRegistro;
+
+    @FXML
+    private GridPane gridPane;
 
     @FXML
     void adicionarRegistro(ActionEvent event) throws IOException {
