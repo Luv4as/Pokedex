@@ -2,15 +2,21 @@ package com.pokedex.pokedex.model.pkm;
 
 import com.pokedex.pokedex.enums.PokemonGames;
 import com.pokedex.pokedex.enums.PokemonType;
+import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
 public class Pokemon {
+    @SerializedName("name")
     private String name;
     private String description;
+    @SerializedName("types")
     private List<PokemonType> type;
+    @SerializedName("game_indices")
     private List<PokemonGames> availableInGames;
+    @SerializedName("moves")
     private List<PokemonMovement> allMovements;
+    @SerializedName("")
     private List<Pokemon> evolutions;
     private int evolutionLevel;
 
