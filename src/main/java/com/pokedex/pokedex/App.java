@@ -8,10 +8,13 @@ import com.google.firebase.auth.UserRecord;
 import com.pokedex.pokedex.api.ApiClient;
 import com.pokedex.pokedex.api.ApiInterface;
 import com.pokedex.pokedex.data.PokemonData;
+import com.pokedex.pokedex.firebase.DatabaseInstance;
 import com.pokedex.pokedex.firebase.FirebaseInstance;
+import com.pokedex.pokedex.model.pkm.CapturedPokemon;
 import com.pokedex.pokedex.model.pkm.Pokemon;
 import com.pokedex.pokedex.model.pkm.PokemonMovement;
 import com.pokedex.pokedex.model.pkm.PokemonType;
+import com.pokedex.pokedex.model.trainer.PokemonTrainer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -19,25 +22,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import retrofit2.Call;
 
+import java.util.ArrayList;
+
 public class App extends Application {
 
     public static void main(String[] args) throws Exception {
         FirebaseInstance.init();
-        FirebaseAuth.getInstance();
-
-        UserRecord.CreateRequest request = new UserRecord.CreateRequest()
-                .setEmail("hcs.caue@gmail.com")
-                .setEmailVerified(true)
-                .setPassword("2412421412421421")
-                .setPhoneNumber("+81983080058")
-                .setDisplayName("Deide Costa")
-                .setDisabled(false);
-        FirebaseAuth.getInstance().createUser(request);
+        launch(args);
     }
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        PokemonData pkData = PokemonData.getInstance();
+        PokemonData pkData = PokemonData.getInstance();
 
         //Tela login
         FXMLLoader loader = new FXMLLoader(App.class.getResource("fxml/layoutLogin.fxml"));
