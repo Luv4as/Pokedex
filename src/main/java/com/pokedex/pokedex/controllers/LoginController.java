@@ -1,4 +1,4 @@
-package com.pokedex.pokedex.data;
+package com.pokedex.pokedex.controllers;
 
 import java.io.IOException;
 
@@ -29,6 +29,7 @@ public class LoginController {
         stage.setTitle("Perfil");
         stage.setScene(tela);
         stage.show();
+        
         
     }
 

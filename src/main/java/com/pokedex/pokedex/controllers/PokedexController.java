@@ -1,4 +1,4 @@
-package com.pokedex.pokedex.data;
+package com.pokedex.pokedex.controllers;
 
 import java.io.IOException;
 
@@ -73,4 +73,6 @@ public class PokedexController {
     void removeHover2() {
         btRegBattle.setStyle(IDLE_BUTTON_STYLE);
     }
+
+    
 }

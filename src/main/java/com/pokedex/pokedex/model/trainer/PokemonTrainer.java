@@ -11,49 +11,22 @@ public class PokemonTrainer {
     private String nickname;
     private String urlImage;
     private List<CapturedPokemon> pokemonsOnPC;
-    private List<PokemonItem> itensOnBackpack;
-    private List<PokemonMovement> movementsInBackpack;
-    private List<GymBadge> badges;
-    public List<CapturedPokemon> getPokemonsOnPC() {
-        return pokemonsOnPC;
-    }
+    private List<Boolean> badges;
 
-    public PokemonTrainer(int idTrainerCard, String nickname, String urlImage, List<CapturedPokemon> pokemonsOnPC, List<PokemonItem> itensOnBackpack, List<PokemonMovement> movementsInBackpack, List<GymBadge> badges) {
+    public PokemonTrainer(int idTrainerCard, String nickname, String urlImage, List<CapturedPokemon> pokemonsOnPC, List<Boolean> badges) {
         this.idTrainerCard = idTrainerCard;
         this.nickname = nickname;
         this.urlImage = urlImage;
         this.pokemonsOnPC = pokemonsOnPC;
-        this.itensOnBackpack = itensOnBackpack;
-        this.movementsInBackpack = movementsInBackpack;
         this.badges = badges;
+    }
+
+    public List<CapturedPokemon> getPokemonsOnPC() {
+        return pokemonsOnPC;
     }
 
     public void addPokemonsOnPC(CapturedPokemon pokemon) {
         this.pokemonsOnPC.add(pokemon);
-    }
-
-    public List<PokemonItem> getItensOnBackpack() {
-        return itensOnBackpack;
-    }
-
-    public void addItensOnBackpack(PokemonItem item) {
-        this.itensOnBackpack.add(item);
-    }
-
-    public List<PokemonMovement> getMovementsInBackpack() {
-        return movementsInBackpack;
-    }
-
-    public void addMovementsInBackpack(PokemonMovement movement) {
-        this.movementsInBackpack.add(movement);
-    }
-
-    public List<GymBadge> getBadges() {
-        return badges;
-    }
-
-    public void addBadges(GymBadge badge) {
-        this.badges.add(badge);
     }
 
     public int getIdTrainerCard() {
@@ -78,5 +51,13 @@ public class PokemonTrainer {
 
     public void setUrlImage(String urlImage) {
         this.urlImage = urlImage;
+    }
+
+    public List<Boolean> getBadges() {
+        return badges;
+    }
+
+    public void setBadges(List<Boolean> badges) {
+        this.badges = badges;
     }
 }

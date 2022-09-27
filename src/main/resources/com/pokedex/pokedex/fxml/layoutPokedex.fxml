@@ -23,7 +23,11 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.data.PokedexController">
+=======
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.controllers.PokedexController">
+>>>>>>> 89921bf4fd3fe7811baea42145833c3f427250bb
    <children>
       <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
@@ -361,7 +365,7 @@
                      </children></AnchorPane>
                   <ScrollPane prefHeight="200.0" prefWidth="200.0">
                      <content>
-                        <GridPane prefHeight="722.0" prefWidth="6000.0" style="-fx-background-color: #cdcdcd;">
+                        <GridPane fx:id="grid" prefHeight="722.0" prefWidth="6000.0" style="-fx-background-color: #cdcdcd;">
                           <columnConstraints>
                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                               <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />

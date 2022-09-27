@@ -2,6 +2,7 @@ module com.pokedex.pokedex {
     requires transitive javafx.graphics;
     requires javafx.controls;
     requires javafx.fxml;
+
     requires retrofit2;
     requires retrofit2.converter.gson;
     requires google.api.client.gson;
@@ -14,10 +15,12 @@ module com.pokedex.pokedex {
     requires com.google.gson;
     requires picasso;
 
-
     opens com.pokedex.pokedex to javafx.fxml;
+    opens com.pokedex.pokedex.model.pkm;
+    opens com.pokedex.pokedex.enums;
+    opens com.pokedex.pokedex.controllers to javafx.fxml;
 
-    opens com.pokedex.pokedex.data to javafx.fxml;
-
+    exports com.pokedex.pokedex.model.pkm;
+    exports com.pokedex.pokedex.enums;
     exports com.pokedex.pokedex;
 }

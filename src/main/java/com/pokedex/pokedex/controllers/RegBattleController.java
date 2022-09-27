@@ -1,4 +1,4 @@
-package com.pokedex.pokedex.data;
+package com.pokedex.pokedex.controllers;
 
 import java.io.IOException;
 
@@ -35,6 +35,9 @@ public class RegBattleController {
 
     private Button[][] gridButtons;
 
+
+    @FXML
+    private GridPane gridPane;
 
     @FXML
     void adicionarRegistro(ActionEvent event) throws IOException {
