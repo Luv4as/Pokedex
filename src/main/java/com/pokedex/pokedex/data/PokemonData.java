@@ -32,6 +32,7 @@ public class PokemonData {
                 System.out.println(i);
                 try {
                     Pokemon pk = api.getPokemon(i).execute().body();
+                    pk.setSprite(String.format("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/%d.svg", pk.getId()));
 
                     boolean canGetMovementDetail = true;
                     int countMovementDetail = 0;
@@ -69,7 +70,7 @@ public class PokemonData {
         return null;
     }
 
-        public Pokemon getPokemonInList(int index) {
+    public Pokemon getPokemonInList(int index) {
         return pokemonList.get(index);
     }
 }
