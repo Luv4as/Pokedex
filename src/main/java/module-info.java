@@ -18,7 +18,7 @@ module com.pokedex.pokedex {
     opens com.pokedex.pokedex to javafx.fxml;
     opens com.pokedex.pokedex.model.pkm;
     opens com.pokedex.pokedex.enums;
-    opens com.pokedex.pokedex.data to javafx.fxml;
+    opens com.pokedex.pokedex.controllers to javafx.fxml;
 
     exports com.pokedex.pokedex.model.pkm;
     exports com.pokedex.pokedex.enums;

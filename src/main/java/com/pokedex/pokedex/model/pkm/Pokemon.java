@@ -14,15 +14,13 @@ public class Pokemon {
     @SerializedName("moves")
     private List<PokemonMovementApi> allMovements;
     private List<Pokemon> evolutions;
-    private int evolutionLevel;
 
-    public Pokemon(int id, String name, List<PokemonTypeApi> type, List<PokemonMovementApi> allMovements, List<Pokemon> evolutions, int evolutionLevel) {
+    public Pokemon(int id, String name, List<PokemonTypeApi> type, List<PokemonMovementApi> allMovements, List<Pokemon> evolutions) {
         this.id = id;
         this.name = name;
         this.type = type;
         this.allMovements = allMovements;
         this.evolutions = evolutions;
-        this.evolutionLevel = evolutionLevel;
     }
 
     public int getId() {
@@ -63,14 +61,6 @@ public class Pokemon {
 
     public void setEvolutions(List<Pokemon> evolutions) {
         this.evolutions = evolutions;
-    }
-
-    public int getEvolutionLevel() {
-        return evolutionLevel;
-    }
-
-    public void setEvolutionLevel(int evolutionLevel) {
-        this.evolutionLevel = evolutionLevel;
     }
 }
 

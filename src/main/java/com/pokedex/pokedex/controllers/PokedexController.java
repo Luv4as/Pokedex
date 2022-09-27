@@ -1,4 +1,4 @@
-package com.pokedex.pokedex.data;
+package com.pokedex.pokedex.controllers;
 
 import java.io.IOException;
 
@@ -10,11 +10,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class RegBattleController {
+public class PokedexController {
 
     @FXML
     private Button btPerfil;
@@ -24,22 +23,6 @@ public class RegBattleController {
 
     @FXML
     private Button btRegBattle;
-
-    @FXML
-    private Button btRegistro;
-
-    @FXML
-    private GridPane gridPane;
-
-    @FXML
-    void adicionarRegistro(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutBattle.fxml"));
-        Scene tela = new Scene(root);
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.setTitle("Battle");
-        stage.setScene(tela);
-        stage.show();
-    }
 
     @FXML
     void changeToPerfil(ActionEvent event) throws IOException {
@@ -54,19 +37,23 @@ public class RegBattleController {
     }
 
     @FXML
-    void changeToPokedex(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutPokedex.fxml"));
+    void changeToRegBattle(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
         Scene tela = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        String css = App.class.getResource("css/layoutPokedex.css").toExternalForm();
+        String css = App.class.getResource("css/layoutRegBattle.css").toExternalForm();
         root.getStylesheets().add(css);
-        stage.setTitle("Pokedex");
+        stage.setTitle("Registro de Batalhas");
         stage.setScene(tela);
         stage.show();
+    }
+    void initialize() {
+
     }
 
     final String IDLE_BUTTON_STYLE = "-fx-background-color: #F0AAA6; -fx-background-radius: 10px;";
     final String HOVERED_BUTTON_STYLE = "-fx-background-color: #FA7B7B; -fx-background-radius: 10px;";
+
     @FXML
     void addHover1() {
         btPerfil.setStyle(HOVERED_BUTTON_STYLE);
@@ -79,12 +66,13 @@ public class RegBattleController {
 
     @FXML
     void addHover2() {
-        btPokedex.setStyle(HOVERED_BUTTON_STYLE);
+        btRegBattle.setStyle(HOVERED_BUTTON_STYLE);
     }
 
     @FXML
     void removeHover2() {
-        btPokedex.setStyle(IDLE_BUTTON_STYLE);
+        btRegBattle.setStyle(IDLE_BUTTON_STYLE);
     }
 
+    
 }

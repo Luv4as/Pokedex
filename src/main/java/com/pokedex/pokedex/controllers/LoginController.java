@@ -1,11 +1,7 @@
-package com.pokedex.pokedex.data;
+package com.pokedex.pokedex.controllers;
 
 import java.io.IOException;
 
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.pokedex.pokedex.App;
 
 import javafx.event.ActionEvent;

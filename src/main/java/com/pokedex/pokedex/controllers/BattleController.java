@@ -1,4 +1,4 @@
-package com.pokedex.pokedex.data;
+package com.pokedex.pokedex.controllers;
 
 import java.io.IOException;
 
