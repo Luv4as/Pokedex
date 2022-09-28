@@ -39,7 +39,9 @@ public class PokemonData {
     public void GetPokemonOnDatabase() {
         for (int i = 1; i <= 151; i++) {
             System.out.println(i);
-            String a = DatabaseInstance.Get("", "pokemons", String.valueOf(i));
+            DatabaseInstance.GetPokemon("pokemons", i, "name");
+            DatabaseInstance.GetPokemon("pokemons", i, "sprite");
+            DatabaseInstance.GetPokemon("pokemons", i, "type");
         }
     }
 
@@ -57,7 +59,7 @@ public class PokemonData {
 
                 while (canGetMovementDetail) {
                     try {
-                        pk.getAllMovements().get(countMovementDetail).setMove(api.getMoveDetails(pk.getAllMovements().get(countMovementDetail).getMove().getName()).execute().body());
+//                        pk.getAllMovements().get(countMovementDetail).setMove(api.getMoveDetails(pk.getAllMovements().get(countMovementDetail).getMove().getName()).execute().body());
                         System.out.println(countMovementDetail);
                         countMovementDetail += 1;
                     } catch(Exception error) {
@@ -74,6 +76,15 @@ public class PokemonData {
 
     public Pokemon getPokemonInList(int index) {
         return pokemonList.get(index);
+    }
+
+    public Pokemon getPokemonInListById(int id) {
+        for (int i = 0; i < pokemonList.size(); i++) {
+            if(getPokemonInList(i).getId() == id) {
+                return getPokemonInList(i);
+            }
+        }
+        return null;
     }
 
     public void addPokemonInList(Pokemon pokemon) {

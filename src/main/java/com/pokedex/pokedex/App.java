@@ -8,6 +8,7 @@ import com.google.firebase.auth.UserRecord;
 import com.pokedex.pokedex.api.ApiClient;
 import com.pokedex.pokedex.api.ApiInterface;
 import com.pokedex.pokedex.data.PokemonData;
+import com.pokedex.pokedex.data.UsersData;
 import com.pokedex.pokedex.firebase.DatabaseInstance;
 import com.pokedex.pokedex.firebase.FirebaseInstance;
 import com.pokedex.pokedex.model.pkm.CapturedPokemon;
@@ -33,7 +34,16 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+//        ArrayList<Boolean> badges = new ArrayList<Boolean>();
+//        badges.add(false); badges.add(false);
+//        badges.add(false); badges.add(false);
+//        badges.add(false); badges.add(false);
+//        badges.add(false); badges.add(false);
+//        PokemonTrainer user = new PokemonTrainer(0, 0, 0, 0, 0, "", "", "", null, badges);
+//        UsersData.getInstance().addUserInList(user);
+
         PokemonData pkData = PokemonData.getInstance();
+//        UsersData trainerData = UsersData.getInstance();
 
         //Tela login
         FXMLLoader loader = new FXMLLoader(App.class.getResource("fxml/layoutLogin.fxml"));

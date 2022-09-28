@@ -7,7 +7,7 @@ import com.pokedex.pokedex.model.pkm.PokemonMovement;
 import java.util.List;
 
 public class PokemonTrainer {
-    private int idTrainerCard;
+    private String idTrainerCard;
     private String nickname;
     private String urlImage;
     private List<CapturedPokemon> pokemonsOnPC;
@@ -18,7 +18,7 @@ public class PokemonTrainer {
     private int nDer;
     private int nFugas;
 
-    public PokemonTrainer(int nPokCapt, int nBatFeitas, int nVit, int nDer, int nFugas, int idTrainerCard, String nickname, String urlImage, List<CapturedPokemon> pokemonsOnPC, List<Boolean> badges) {
+    public PokemonTrainer(int nPokCapt, int nBatFeitas, int nVit, int nDer, int nFugas, String idTrainerCard, String nickname, String urlImage, List<CapturedPokemon> pokemonsOnPC, List<Boolean> badges) {
         this.nPokCapt = nPokCapt;
         this.nBatFeitas = nBatFeitas;
         this.nVit = nVit;
@@ -39,11 +39,11 @@ public class PokemonTrainer {
         this.pokemonsOnPC.add(pokemon);
     }
 
-    public int getIdTrainerCard() {
+    public String getIdTrainerCard() {
         return idTrainerCard;
     }
 
-    public void setIdTrainerCard(int idTrainerCard) {
+    public void setIdTrainerCard(String idTrainerCard) {
         this.idTrainerCard = idTrainerCard;
     }
 
