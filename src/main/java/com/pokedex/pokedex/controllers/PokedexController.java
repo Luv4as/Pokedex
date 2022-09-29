@@ -46,9 +46,9 @@ public class PokedexController extends PokemonData {
         Integer n = Integer.valueOf(txtPokeNumber.getText());
         System.out.print(n);
 
-        //pokeName.setText(getPokemonInList(n).getName());
-        //pokeType.setText(getPokemonInList(n).getType().get(0).toString());
-        //pokeImg.setImage(getPokemonInList(n).getSprite());
+        pokeName.setText(PokemonData.getInstance().getPokemonInListById(n).getName());
+        pokeType.setText(PokemonData.getInstance().getPokemonInListById(n).getType().get(0).getType().getName());
+//        pokeImg.setImage(getPokemonInList(n).getSprite());
 
     }
 
