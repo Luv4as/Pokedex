@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import com.pokedex.pokedex.App;
 
+import com.pokedex.pokedex.data.UsersData;
+import com.pokedex.pokedex.model.trainer.PokemonTrainer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -48,6 +50,8 @@ public class PerfilController {
 
     @FXML
     private Label nVit;
+    @FXML
+    private Label nomeUser;
 
     @FXML
     void change(ActionEvent event) {
@@ -76,6 +80,38 @@ public class PerfilController {
         stage.setTitle("Registro de Batalhas");
         stage.setScene(tela);
         stage.show();
+    }
+
+    public void initialize() throws Exception {
+        PokemonTrainer trn = UsersData.getInstance().getUsersInListById(UsersData.getInstance().getCurrentUserId());
+        nomeUser.setText(trn.getNickname());
+        nDer.setText(String.valueOf(trn.getnDer()));
+        nFugas.setText(String.valueOf(trn.getnFugas()));
+        nVit.setText(String.valueOf(trn.getnVit()));
+        nBatFeitas.setText(String.valueOf(trn.getnBatFeitas()));
+    }
+
+    final String IDLE_BUTTON_STYLE = "-fx-background-color: #F0AAA6; -fx-background-radius: 10px;";
+    final String HOVERED_BUTTON_STYLE = "-fx-background-color: #FA7B7B; -fx-background-radius: 10px;";
+
+    @FXML
+    void addHover1() {
+        btPokedex.setStyle(HOVERED_BUTTON_STYLE);
+    }
+
+    @FXML
+    void removeHover1() {
+        btPokedex.setStyle(IDLE_BUTTON_STYLE);
+    }
+
+    @FXML
+    void addHover2() {
+        btRegBattle.setStyle(HOVERED_BUTTON_STYLE);
+    }
+
+    @FXML
+    void removeHover2() {
+        btRegBattle.setStyle(IDLE_BUTTON_STYLE);
     }
 
 }

@@ -30,7 +30,6 @@ public class LoginController {
         stage.setScene(tela);
         stage.show();
         
-        
     }
 
 }

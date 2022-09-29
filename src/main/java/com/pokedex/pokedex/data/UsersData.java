@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 public class UsersData {
     private ArrayList<PokemonTrainer> trainersList = new ArrayList<PokemonTrainer>();
+    private String currentUserId = "example";
 
     private static UsersData instance;
 
@@ -36,26 +37,19 @@ public class UsersData {
     }
 
     public void GetUsersOnDatabase() {
-        DatabaseInstance.GetUser("users", "example", "idTrainerCard");
-        DatabaseInstance.GetUser("users", "example", "nBatFeitas");
-        DatabaseInstance.GetUser("users", "example", "nDer");
-        DatabaseInstance.GetUser("users", "example", "nFugas");
-        DatabaseInstance.GetUser("users", "example", "nPokCapt");
-        DatabaseInstance.GetUser("users", "example", "nVit");
-        DatabaseInstance.GetUser("users", "example", "nickname");
-        DatabaseInstance.GetUser("users", "example", "urlImage");
+        for (int i = 0; i < 30; i++) {
+            DatabaseInstance.GetUser("users", i, "idTrainerCard");
+        }
     }
 
     public PokemonTrainer getUsersInList(int index) {
-        return trainersList.get(index);
+        return UsersData.getInstance().getTrainersList().get(index);
     }
 
     public PokemonTrainer getUsersInListById(String id) {
-        System.out.println("tam: " + trainersList.size());
-        for (int i = 0; i < trainersList.size(); i++) {
-            System.out.println(getUsersInList(i).getIdTrainerCard());
-            if(getUsersInList(i).getIdTrainerCard() == id) {
-                return getUsersInList(i);
+        for (int i = 0; i < UsersData.getInstance().getTrainersList().size(); i++) {
+            if(UsersData.getInstance().getUsersInList(i).getIdTrainerCard().equals(id)) {
+                return UsersData.getInstance().getUsersInList(i);
             }
         }
         return null;
@@ -63,5 +57,17 @@ public class UsersData {
 
     public void addUserInList(PokemonTrainer trainer) {
         this.trainersList.add(trainer);
+    }
+
+    public ArrayList<PokemonTrainer> getTrainersList() {
+        return trainersList;
+    }
+
+    public String getCurrentUserId() {
+        return currentUserId;
+    }
+
+    public void setCurrentUserId(String currentUserId) {
+        this.currentUserId = currentUserId;
     }
 }

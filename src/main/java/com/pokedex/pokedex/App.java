@@ -34,16 +34,8 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-//        ArrayList<Boolean> badges = new ArrayList<Boolean>();
-//        badges.add(false); badges.add(false);
-//        badges.add(false); badges.add(false);
-//        badges.add(false); badges.add(false);
-//        badges.add(false); badges.add(false);
-//        PokemonTrainer user = new PokemonTrainer(0, 0, 0, 0, 0, "", "", "", null, badges);
-//        UsersData.getInstance().addUserInList(user);
-
         PokemonData pkData = PokemonData.getInstance();
-//        UsersData trainerData = UsersData.getInstance();
+        UsersData trainerData = UsersData.getInstance();
 
 
         //Tela login

@@ -31,20 +31,21 @@ public class PokemonData {
     public void getAllPokemons() {
         if(pokemonList.isEmpty()) {
             try {
-                GetPokemonOnDatabase();
+//                GetPokemonOnDatabase();
+                SetPokemonOnDatabase();
             } catch (Exception err) {
                 SetPokemonOnDatabase();
             }
-//            System.out.println(getPokemonInList(24).getName());
         }
     }
 
     public void GetPokemonOnDatabase() {
         for (int i = 1; i <= 151; i++) {
-            System.out.println(i);
+            //System.out.println(i);
             DatabaseInstance.GetPokemon("pokemons", i, "name");
             DatabaseInstance.GetPokemon("pokemons", i, "sprite");
             DatabaseInstance.GetPokemon("pokemons", i, "type");
+            DatabaseInstance.GetPokemon("pokemons", i, "stats");
         }
     }
 
@@ -52,17 +53,15 @@ public class PokemonData {
         ApiInterface api = ApiClient.getClient().create(ApiInterface.class);
 
         for (int i = 1; i <= 151; i++) {
-            System.out.println(i);
             try {
                 Pokemon pk = api.getPokemon(i).execute().body();
-                pk.setSprite(String.format("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/%d.svg", pk.getId()));
-
+                pk.setSprite(String.format("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/%d.png", pk.getId()));
                 boolean canGetMovementDetail = true;
                 int countMovementDetail = 0;
 
                 while (canGetMovementDetail) {
                     try {
-//                        pk.getAllMovements().get(countMovementDetail).setMove(api.getMoveDetails(pk.getAllMovements().get(countMovementDetail).getMove().getName()).execute().body());
+                        pk.getAllMovements().get(countMovementDetail).setMove(api.getMoveDetails(pk.getAllMovements().get(countMovementDetail).getMove().getName()).execute().body());
                         System.out.println(countMovementDetail);
                         countMovementDetail += 1;
                     } catch(Exception error) {
