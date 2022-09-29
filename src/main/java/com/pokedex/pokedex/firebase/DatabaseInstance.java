@@ -37,11 +37,9 @@ public class DatabaseInstance {
                     switch (key) {
                         case "name":
                             PokemonData.getInstance().getPokemonInListById(child).setName(str);
-                            System.out.println(PokemonData.getInstance().getPokemonInListById(child).getName());
                             break;
                         case "sprite":
                             PokemonData.getInstance().getPokemonInListById(child).setSprite(str);
-                            System.out.println(PokemonData.getInstance().getPokemonInListById(child).getSprite());
                             break;
                         case "type":
                             String[] types = str.split("},");
@@ -76,7 +74,7 @@ public class DatabaseInstance {
         return value[0];
     }
 
-    public static String GetUser(String parent, String child, String key) {
+    public static String GetUser(String parent, int child, String key) {
         final String[] value = {""};
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference(parent).child(String.valueOf(child));
@@ -86,52 +84,48 @@ public class DatabaseInstance {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 String str = dataSnapshot.getValue().toString();
 
-//                if(UsersData.getInstance().getUsersInListById(child) == null) {
-//                    ArrayList<Boolean> badges = new ArrayList<Boolean>();
-//                    badges.add(false); badges.add(false);
-//                    badges.add(false); badges.add(false);
-//                    badges.add(false); badges.add(false);
-//                    badges.add(false); badges.add(false);
-//                    PokemonTrainer user = new PokemonTrainer(0, 0, 0, 0, 0, "", "", "", null, badges);
-//                    UsersData.getInstance().addUserInList(user);
-//                }
+                if(key.equals("idTrainerCard") && UsersData.getInstance().getUsersInListById(str) == null) {
+                    ArrayList<Boolean> badges = new ArrayList<Boolean>();
+                    badges.add(false); badges.add(false);
+                    badges.add(false); badges.add(false);
+                    badges.add(false); badges.add(false);
+                    badges.add(false); badges.add(false);
+                    PokemonTrainer user = new PokemonTrainer(0, 0, 0, 0, 0, "", "test", "", null, badges);
+                    UsersData.getInstance().addUserInList(user);
+                }
 
                 try {
                     switch (key) {
                         case "nPokCapt":
-                            System.out.println(str);
-                            UsersData.getInstance().getUsersInListById(child).setnPokCapt(Integer.parseInt(str));
-                            System.out.println( UsersData.getInstance().getUsersInListById(child).getnPokCapt());
+                            UsersData.getInstance().getUsersInList(child).setnPokCapt(Integer.parseInt(str));
                             break;
                         case "nBatFeitas":
-                            System.out.println(str);
-                            UsersData.getInstance().getUsersInListById(child).setnBatFeitas(Integer.parseInt(str));
-                            System.out.println( UsersData.getInstance().getUsersInListById(child).getnBatFeitas());
+                            UsersData.getInstance().getUsersInList(child).setnBatFeitas(Integer.parseInt(str));
                             break;
                         case "nVit":
-                            System.out.println(str);
-                            UsersData.getInstance().getUsersInListById(child).setnVit(Integer.parseInt(str));
-                            System.out.println( UsersData.getInstance().getUsersInListById(child).getnVit());
+                            UsersData.getInstance().getUsersInList(child).setnVit(Integer.parseInt(str));
                             break;
                         case "nDer":
-                            System.out.println(str);
-                            UsersData.getInstance().getUsersInListById(child).setnDer(Integer.parseInt(str));
-                            System.out.println( UsersData.getInstance().getUsersInListById(child).getnDer());
+                            UsersData.getInstance().getUsersInList(child).setnDer(Integer.parseInt(str));
+                            break;
+                        case "nFugas":
+                            UsersData.getInstance().getUsersInList(child).setnFugas(Integer.parseInt(str));
                             break;
                         case "idTrainerCard":
-                            System.out.println(str);
-                            UsersData.getInstance().getUsersInListById(child).setIdTrainerCard(str);
-                            System.out.println( UsersData.getInstance().getUsersInListById(child).getIdTrainerCard());
+                            UsersData.getInstance().getUsersInList(child).setIdTrainerCard(str);
+                            DatabaseInstance.GetUser("users", child, "nBatFeitas");
+                            DatabaseInstance.GetUser("users", child, "nDer");
+                            DatabaseInstance.GetUser("users", child, "nFugas");
+                            DatabaseInstance.GetUser("users", child, "nPokCapt");
+                            DatabaseInstance.GetUser("users", child, "nVit");
+                            DatabaseInstance.GetUser("users", child, "nickname");
+                            DatabaseInstance.GetUser("users", child, "urlImage");
                             break;
                         case "nickname":
-                            System.out.println(str);
-                            UsersData.getInstance().getUsersInListById(child).setNickname(str);
-                            System.out.println( UsersData.getInstance().getUsersInListById(child).getNickname());
+                            UsersData.getInstance().getUsersInList(child).setNickname(str);
                             break;
                         case "urlImage":
-                            System.out.println(str);
-                            UsersData.getInstance().getUsersInListById(child).setUrlImage(str);
-                            System.out.println( UsersData.getInstance().getUsersInListById(child).getUrlImage());
+                            UsersData.getInstance().getUsersInList(child).setUrlImage(str);
                             break;
 
                     }

@@ -32,46 +32,74 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.Tab?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.pokedex.pokedex.controllers.PerfilController">
+<?import javafx.scene.Cursor?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.controllers.PerfilController">
   <children>
       <AnchorPane prefHeight="802.0" prefWidth="1283.0">
          <children>
-            <ToolBar nodeOrientation="LEFT_TO_RIGHT" opacity="0.75" prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: EF4036;">
-              <items>
-                  <Button fx:id="btPerfil" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;">
+            <ToolBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="60.0" prefWidth="1280.0" style="-fx-background-color: EF4036;">
+               <items>
+                  <Button fx:id="btPerfil" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white; -fx-background-radius: 10px;" translateX="-32.0">
                      <effect>
                         <DropShadow />
-                     </effect></Button>
-                  <Button fx:id="btPokedex" alignment="CENTER" mnemonicParsing="false" onAction="#changeToPokedex" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-                  <Button fx:id="btRegBattle" alignment="CENTER" mnemonicParsing="false" onAction="#changeToRegBattle" opacity="0.4" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: white;" />
-              </items>
+                     </effect>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/profileIconE.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btPokedex" onAction="#changeToPokedex" onMouseEntered="#addHover1" onMouseExited="#removeHover1" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: F0AAA6; -fx-background-radius: 10px;">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/pokebolaIconD.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btRegBattle" alignment="CENTER" mnemonicParsing="false" onAction="#changeToRegBattle" onMouseEntered="#addHover2" onMouseExited="#removeHover2" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: F0AAA6; -fx-background-radius: 10px;" translateX="32.0">
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <opaqueInsets>
+                        <Insets right="30.0" top="30.0" />
+                     </opaqueInsets>
+                     <graphic>
+                        <ImageView fitHeight="150.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/swordIconD.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </items>
                <padding>
                   <Insets left="576.0" />
                </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
             </ToolBar>
             <SplitPane dividerPositions="0.6051602814698983" layoutY="58.0" prefHeight="744.0" prefWidth="1281.0">
                <items>
@@ -290,7 +318,7 @@
                               <Image url="@../images/perfil/Rectangle%204.png" />
                            </image>
                         </ImageView>
-                        <Label layoutX="52.0" layoutY="184.0" prefHeight="17.0" prefWidth="125.0" text="NOME DO USUÁRIO" textAlignment="CENTER" textFill="#ef4036">
+                        <Label fx:id="nomeUser" layoutX="52.0" layoutY="184.0" prefHeight="17.0" prefWidth="125.0" text="NOME DO USUÁRIO" textAlignment="CENTER" textFill="#ef4036">
                            <font>
                               <Font name="Candara Bold" size="14.0" />
                            </font>
