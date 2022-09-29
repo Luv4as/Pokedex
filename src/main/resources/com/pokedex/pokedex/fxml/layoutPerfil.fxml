@@ -33,6 +33,7 @@
 -->
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
@@ -41,7 +42,6 @@
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<?import javafx.scene.Cursor?>
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.controllers.PerfilController">
   <children>
       <AnchorPane prefHeight="802.0" prefWidth="1283.0">
@@ -60,7 +60,7 @@
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button fx:id="btPokedex" onAction="#changeToPokedex" onMouseEntered="#addHover1" onMouseExited="#removeHover1" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: F0AAA6; -fx-background-radius: 10px;">
+                  <Button fx:id="btPokedex" alignment="CENTER" mnemonicParsing="false" onAction="#changeToPokedex" onMouseEntered="#addHover1" onMouseExited="#removeHover1" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: F0AAA6; -fx-background-radius: 10px;">
                      <effect>
                         <DropShadow />
                      </effect>
@@ -120,82 +120,82 @@
                               <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <ImageView fx:id="bg3" onMouseClicked="#toggleBadge3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="80.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <ImageView fx:id="badge3" onMouseClicked="#toggleBadge3" fitHeight="80.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-amarelo%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <ImageView fx:id="bg7" onMouseClicked="#toggleBadge7" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20213.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="65.77" fitWidth="57.91" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <ImageView fx:id="badge7" onMouseClicked="#toggleBadge7" fitHeight="65.77" fitWidth="57.91" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-azul%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="bg1" onMouseClicked="#toggleBadge1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <ImageView fx:id="bg2" onMouseClicked="#toggleBadge2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20213.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <ImageView fx:id="badge2" onMouseClicked="#toggleBadge2" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-rosa%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <ImageView fx:id="bg4" onMouseClicked="#toggleBadge4" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20215.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="76.0" fitWidth="80.27" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <ImageView fx:id="badge4" onMouseClicked="#toggleBadge4" fitHeight="76.0" fitWidth="80.27" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-lgbt%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                              <ImageView fx:id="bg5" onMouseClicked="#toggleBadge5" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20213.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                              <ImageView fx:id="badge5" onMouseClicked="#toggleBadge5" fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-verde%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <ImageView fx:id="bg6" onMouseClicked="#toggleBadge6" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <ImageView fx:id="badge6" onMouseClicked="#toggleBadge6" fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-removebg-preview%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="badge1" onMouseClicked="#toggleBadge1" fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-removebg-preview%20(1)%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="97.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <ImageView fx:id="bg8" onMouseClicked="#toggleBadge8" fitHeight="100.0" fitWidth="100.0" layoutX="97.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <ImageView fx:id="badge8" onMouseClicked="#toggleBadge8" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-red%201.png" />
                                  </image>

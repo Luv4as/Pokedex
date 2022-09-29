@@ -4,6 +4,7 @@ import com.pokedex.pokedex.model.pkm.CapturedPokemon;
 import com.pokedex.pokedex.model.pkm.PokemonItem;
 import com.pokedex.pokedex.model.pkm.PokemonMovement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class PokemonTrainer {
@@ -69,6 +70,9 @@ public class PokemonTrainer {
 
     public void setBadges(List<Boolean> badges) {
         this.badges = badges;
+    }
+    public void setInBadge(int index, boolean value) {
+        this.getBadges().set(index, value);
     }
 
     public void setPokemonsOnPC(List<CapturedPokemon> pokemonsOnPC) {

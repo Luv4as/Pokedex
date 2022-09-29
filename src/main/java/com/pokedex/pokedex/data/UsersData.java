@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class UsersData {
     private ArrayList<PokemonTrainer> trainersList = new ArrayList<PokemonTrainer>();
     private String currentUserId = "example";
-
+    private int currentUserIndex = 0;
     private static UsersData instance;
 
     public static UsersData getInstance() {
@@ -69,5 +69,13 @@ public class UsersData {
 
     public void setCurrentUserId(String currentUserId) {
         this.currentUserId = currentUserId;
+    }
+
+    public int getCurrentUserIndex() {
+        return currentUserIndex;
+    }
+
+    public void setCurrentUserIndex(int currentUserIndex) {
+        this.currentUserIndex = currentUserIndex;
     }
 }
