@@ -75,7 +75,7 @@
             <Image url="@../images/regBattle/pokemon%20-%2000.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="pkb1" layoutX="268.0" layoutY="338.0" nodeOrientation="INHERIT">
+      <ImageView fx:id="pkb1" layoutX="-25.0" layoutY="338.0" nodeOrientation="INHERIT" visible="false">
          <image>
             <Image url="@../images/regBattle/versus@2x.png" />
          </image>
@@ -109,14 +109,14 @@
       <Button fx:id="btPerdi" layoutX="650.0" layoutY="577.0" mnemonicParsing="false" onAction="#perdi" opacity="0.0" prefHeight="39.0" prefWidth="99.0" />
       <Button fx:id="btOponentefugiu" graphicTextGap="0.0" layoutX="544.0" layoutY="628.0" mnemonicParsing="false" onAction="#oponentefugiu" opacity="0.0" prefHeight="29.0" prefWidth="209.0" />
       <Button fx:id="btSair" layoutX="625.0" layoutY="56.0" mnemonicParsing="false" onAction="#sair" opacity="0.0" prefHeight="60.0" prefWidth="55.0" />
-      <MenuButton fx:id="btSelectPoke1" layoutX="259.0" layoutY="327.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="86.0">
-        <items>
-          <MenuItem mnemonicParsing="false">
+      <MenuButton fx:id="btSelectPoke1" layoutX="258.0" layoutY="329.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="86.0">
+         <items>
+            <MenuItem mnemonicParsing="false">
                <graphic>
                   <TextField fx:id="pokeId1" onAction="#action1" promptText="Barra de pesquisa" />
                </graphic>
             </MenuItem>
-          <MenuItem mnemonicParsing="false">
+            <MenuItem mnemonicParsing="false">
                <graphic>
                   <ImageView fx:id="imgPoke1" fitHeight="150.0" fitWidth="200.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -125,7 +125,7 @@
                   </ImageView>
                </graphic>
             </MenuItem>
-        </items>
+         </items>
       </MenuButton>
       <MenuButton fx:id="btSelectPoke7" layoutX="907.0" layoutY="317.0" mnemonicParsing="false" opacity="0.0" prefHeight="84.0" prefWidth="86.0">
          <items>
@@ -145,5 +145,10 @@
             </MenuItem>
          </items>
       </MenuButton>
+      <ImageView layoutX="268.0" layoutY="340.0" nodeOrientation="INHERIT">
+         <image>
+            <Image url="@../images/regBattle/versus@2x.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

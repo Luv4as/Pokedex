@@ -58,7 +58,6 @@ public class DatabaseInstance {
                                 PokemonStatusApi statusApi = new PokemonStatusApi(0,0, null);
                                 statusApi.setBase_stat(Integer.parseInt(statusses[i].split("=")[1].split(",")[0]));
                                 PokemonData.getInstance().getPokemonInListById(child).addStats(statusApi);
-                                System.out.println(str);
                             }
                             break;
 
@@ -88,6 +87,7 @@ public class DatabaseInstance {
                 String str = dataSnapshot.getValue().toString();
 
                 if(key.equals("idTrainerCard") && UsersData.getInstance().getUsersInListById(str) == null) {
+                    System.out.println("rraura");
                     ArrayList<Boolean> badges = new ArrayList<Boolean>();
                     badges.add(false); badges.add(false);
                     badges.add(false); badges.add(false);

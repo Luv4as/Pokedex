@@ -2,6 +2,7 @@ package com.pokedex.pokedex.controllers;
 
 import com.pokedex.pokedex.App;
 import com.pokedex.pokedex.data.PokemonData;
+import com.pokedex.pokedex.data.RegBattleData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -66,40 +67,68 @@ public class BattleController {
     }
 
     @FXML
-    void ganhei(ActionEvent event) {
+    void ganhei(ActionEvent event) throws IOException {
+        RegBattleData.getInstance().setButtonsVisible(true, 0);
+        RegBattleData.getInstance().setButtonsVisible(false, 1);
+        //RegBattleController.setBattle();
 
+        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
+        Scene tela = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Perfil");
+        stage.setScene(tela);
+        stage.show();
     }
 
     @FXML
-    void oponentefugiu(ActionEvent event) {
-
+    void oponentefugiu(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
+        Scene tela = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Perfil");
+        stage.setScene(tela);
+        stage.show();
     }
 
     @FXML
-    void perdi(ActionEvent event) {
+    void perdi(ActionEvent event) throws IOException {
+        RegBattleData.getInstance().setButtonsVisible(true, 1);
+        RegBattleData.getInstance().setButtonsVisible(false, 0);
+        //RegBattleController.setBattle();
 
+        Parent root = FXMLLoader.load(App.class.getResource("fxml/layoutRegBattle.fxml"));
+        Scene tela = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setTitle("Perfil");
+        stage.setScene(tela);
+        stage.show();
     }
 
     void choosePokemon(int n) {
 
-            switch(n){
-                case 1:
-                    Integer poke = Integer.valueOf(pokeId1.getText());
-                    Image imgP = new Image(PokemonData.getInstance().getPokemonInListById(poke).getSprite());
-                    System.out.println(imgP);
-                    pkb1.setImage(imgP);
-                    pokeId1.clear();
-                    break;
-                case 2:
-                    Integer poke2 = Integer.valueOf(pokeId2.getText());
-                    Image imgP2 = new Image(PokemonData.getInstance().getPokemonInListById(poke2).getSprite());
-                    System.out.println(imgP2);
-                    pkb2.setImage(imgP2);
-                    pokeId2.clear();
-                    break;
-            }
+        switch(n){
+            case 1:
+                Integer poke = Integer.valueOf(pokeId1.getText());
+                Image imgP = new Image(PokemonData.getInstance().getPokemonInListById(poke).getSprite());
+                System.out.println(imgP);
+                pkb1.setVisible(true);
+                pkb1.setImage(imgP);
+                pokeId1.clear();
 
+                RegBattleData.getInstance().setPokemonsInBattle(poke, 0);
+                break;
+            case 2:
+                Integer poke2 = Integer.valueOf(pokeId2.getText());
+                Image imgP2 = new Image(PokemonData.getInstance().getPokemonInListById(poke2).getSprite());
+                System.out.println(imgP2);
+                pkb2.setImage(imgP2);
+                pokeId2.clear();
+
+                RegBattleData.getInstance().setPokemonsInBattle(poke2, 1);
+                break;
         }
+
+    }
 
 
     @FXML
