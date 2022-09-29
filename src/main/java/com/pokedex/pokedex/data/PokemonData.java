@@ -4,8 +4,10 @@ import com.pokedex.pokedex.api.ApiClient;
 import com.pokedex.pokedex.api.ApiInterface;
 import com.pokedex.pokedex.firebase.DatabaseInstance;
 import com.pokedex.pokedex.model.pkm.Pokemon;
-import com.pokedex.pokedex.model.pkm.PokemonMovement;
-import com.pokedex.pokedex.model.pkm.PokemonType;
+import com.squareup.picasso.Picasso;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import java.util.ArrayList;
 import java.util.List;

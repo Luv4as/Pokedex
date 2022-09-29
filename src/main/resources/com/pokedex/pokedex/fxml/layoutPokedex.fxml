@@ -56,7 +56,7 @@
                         <DropShadow />
                      </effect>
                      <cursor>
-                          <Cursor fx:constant="HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                      <opaqueInsets>
                         <Insets right="30.0" top="30.0" />

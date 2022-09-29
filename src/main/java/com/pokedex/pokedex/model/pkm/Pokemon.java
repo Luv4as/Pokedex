@@ -9,6 +9,7 @@ public class Pokemon {
     private int id;
     @SerializedName("name")
     private String name;
+    @SerializedName("sprite")
     private String sprite;
     @SerializedName("types")
     private List<PokemonTypeApi> type;
