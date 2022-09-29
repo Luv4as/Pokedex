@@ -69,7 +69,7 @@
                   <Insets left="575.0" />
                </padding>
             </ToolBar>
-            <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="658.0" prefWidth="607.0">
+            <AnchorPane layoutY="60.0" maxHeight="-1.0" maxWidth="-1.0" prefHeight="731.0" prefWidth="1278.0">
                <children>
                   <AnchorPane layoutX="39.0" layoutY="89.0" prefHeight="86.0" prefWidth="689.0">
                      <children>

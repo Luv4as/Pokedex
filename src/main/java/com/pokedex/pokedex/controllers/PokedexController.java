@@ -14,7 +14,9 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
@@ -60,6 +62,12 @@ public class PokedexController extends PokemonData {
     private TextField txtPokeNumber;
 
     @FXML
+    private Button btPokeball;
+
+    @FXML
+    private ImageView imgPokeball;
+
+    @FXML
     void choosePokemon(ActionEvent event) {
 
         Integer n = 1;
@@ -97,6 +105,9 @@ public class PokedexController extends PokemonData {
             nSpecialDPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(4).getBase_stat()));
             nSpeedPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(5).getBase_stat()));
 
+            Image imgP = new Image(PokemonData.getInstance().getPokemonInListById(n).getSprite());
+            pokeImg.setImage(imgP);
+
             txtPokeNumber.clear();
 
         }
@@ -133,12 +144,29 @@ public class PokedexController extends PokemonData {
             nSpecialDPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(4).getBase_stat()));
             nSpeedPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(5).getBase_stat()));
 
+            Image imgP = new Image(PokemonData.getInstance().getPokemonInListById(n).getSprite());
+            pokeImg.setImage(imgP);
+
             txtPokeNumber.clear();
 
         }
 
     }
 
+    @FXML
+    void btCaptureEnter(MouseEvent event) {
+        imgPokeball.setOpacity(1);
+    }
+
+    @FXML
+    void btCaptureExit(MouseEvent event) {
+        imgPokeball.setOpacity(0.4);
+    }
+
+    @FXML
+    void capturePokemon(ActionEvent event) {
+
+    }
 
     @FXML
     void changeToPerfil(ActionEvent event) throws IOException {
