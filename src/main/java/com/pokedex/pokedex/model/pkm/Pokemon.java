@@ -16,12 +16,16 @@ public class Pokemon {
     private List<PokemonMovementApi> allMovements;
     private List<Pokemon> evolutions;
 
-    public Pokemon(int id, String name, String sprite, List<PokemonTypeApi> type, List<PokemonMovementApi> allMovements, List<Pokemon> evolutions){
+    @SerializedName("stats")
+    private List<PokemonStatusApi> stats;
+
+    public Pokemon(int id, String name, String sprite, List<PokemonTypeApi> type, List<PokemonMovementApi> allMovements, List<PokemonStatusApi> stats , List<Pokemon> evolutions){
         this.id = id;
         this.name = name;
         this.sprite = sprite;
         this.type = type;
         this.allMovements = allMovements;
+        this.stats = stats;
         this.evolutions = evolutions;
     }
 
@@ -72,5 +76,11 @@ public class Pokemon {
     public void setEvolutions(List<Pokemon> evolutions) {
         this.evolutions = evolutions;
     }
+
+    public List<PokemonStatusApi> getStats() { return stats; }
+
+    public void setStats(List<PokemonStatusApi> stats) { this.stats = stats; }
+
+    public void addStats(PokemonStatusApi stats) { this.stats.add(stats); }
 }
 

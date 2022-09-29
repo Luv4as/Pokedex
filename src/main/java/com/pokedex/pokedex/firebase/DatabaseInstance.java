@@ -4,10 +4,7 @@ import com.google.firebase.database.*;
 import com.google.gson.Gson;
 import com.pokedex.pokedex.data.PokemonData;
 import com.pokedex.pokedex.data.UsersData;
-import com.pokedex.pokedex.model.pkm.Pokemon;
-import com.pokedex.pokedex.model.pkm.PokemonMovementApi;
-import com.pokedex.pokedex.model.pkm.PokemonType;
-import com.pokedex.pokedex.model.pkm.PokemonTypeApi;
+import com.pokedex.pokedex.model.pkm.*;
 import com.pokedex.pokedex.model.trainer.PokemonTrainer;
 
 import java.util.ArrayList;
@@ -32,7 +29,7 @@ public class DatabaseInstance {
                 String str = dataSnapshot.getValue().toString();
 
                 if(PokemonData.getInstance().getPokemonInListById(child) == null) {
-                    Pokemon pk = new Pokemon(child, "", "", new ArrayList<PokemonTypeApi>(), new ArrayList<PokemonMovementApi>(), null);
+                    Pokemon pk = new Pokemon(child, "", "", new ArrayList<PokemonTypeApi>(), new ArrayList<PokemonMovementApi>(), new ArrayList<PokemonStatusApi>() ,null);
                     PokemonData.getInstance().addPokemonInList(pk);
                 }
 
@@ -53,6 +50,14 @@ public class DatabaseInstance {
                                 typeApi.getType().setName(types[i].split("=")[3].split(",")[0]);
                                 typeApi.getType().setUrl("https://pokeapi.co/api/v2/type/" + types[i].split("/")[6]);
                                 PokemonData.getInstance().getPokemonInListById(child).addType(typeApi);
+                            }
+                        case "stats":
+                            String[] statusses = str.split("},");
+                            for (int i = 0; i < statusses.length; i++) {
+                                PokemonStatusApi statusApi = new PokemonStatusApi(0,0, null);
+                                statusApi.setBase_stat(Integer.parseInt(statusses[i].split("=")[1].split(",")[0]));
+                                PokemonData.getInstance().getPokemonInListById(child).addStats(statusApi);
+                                System.out.println(str);
                             }
                             break;
 

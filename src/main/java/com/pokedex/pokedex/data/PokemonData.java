@@ -32,16 +32,16 @@ public class PokemonData {
             } catch (Exception err) {
                 SetPokemonOnDatabase();
             }
-//            System.out.println(getPokemonInList(24).getName());
         }
     }
 
     public void GetPokemonOnDatabase() {
         for (int i = 1; i <= 151; i++) {
-            System.out.println(i);
+            //System.out.println(i);
             DatabaseInstance.GetPokemon("pokemons", i, "name");
             DatabaseInstance.GetPokemon("pokemons", i, "sprite");
             DatabaseInstance.GetPokemon("pokemons", i, "type");
+            DatabaseInstance.GetPokemon("pokemons", i, "stats");
         }
     }
 
@@ -53,14 +53,13 @@ public class PokemonData {
             try {
                 Pokemon pk = api.getPokemon(i).execute().body();
                 pk.setSprite(String.format("https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/%d.svg", pk.getId()));
-
+                System.out.print(pk.getStats().get(0).getBase_stat());
                 boolean canGetMovementDetail = true;
                 int countMovementDetail = 0;
 
                 while (canGetMovementDetail) {
                     try {
-//                        pk.getAllMovements().get(countMovementDetail).setMove(api.getMoveDetails(pk.getAllMovements().get(countMovementDetail).getMove().getName()).execute().body());
-                        System.out.println(countMovementDetail);
+                        pk.getAllMovements().get(countMovementDetail).setMove(api.getMoveDetails(pk.getAllMovements().get(countMovementDetail).getMove().getName()).execute().body());
                         countMovementDetail += 1;
                     } catch(Exception error) {
                         canGetMovementDetail = false;
