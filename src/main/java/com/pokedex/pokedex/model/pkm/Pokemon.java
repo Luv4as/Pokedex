@@ -53,8 +53,8 @@ public class Pokemon {
         return type;
     }
 
-    public void setType(List<PokemonTypeApi> type) {
-        this.type = type;
+    public void addType(PokemonTypeApi type) {
+        this.type.add(type);
     }
 
     public List<PokemonMovementApi> getAllMovements() {

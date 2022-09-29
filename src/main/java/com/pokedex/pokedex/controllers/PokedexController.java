@@ -4,16 +4,20 @@ import java.io.IOException;
 
 import com.pokedex.pokedex.App;
 
+import com.pokedex.pokedex.data.PokemonData;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.Node;
 
-public class PokedexController {
+public class PokedexController extends PokemonData {
 
     @FXML
     private Button btPerfil;
@@ -23,6 +27,31 @@ public class PokedexController {
 
     @FXML
     private Button btRegBattle;
+
+    @FXML
+    private ImageView pokeImg;
+
+    @FXML
+    private Label pokeName;
+
+    @FXML
+    private Label pokeType;
+
+    @FXML
+    private TextField txtPokeNumber;
+
+    @FXML
+    void choosePokemon(ActionEvent event) {
+
+        Integer n = Integer.valueOf(txtPokeNumber.getText());
+        System.out.print(n);
+
+        //pokeName.setText(getPokemonInList(n).getName());
+        //pokeType.setText(getPokemonInList(n).getType().get(0).toString());
+        //pokeImg.setImage(getPokemonInList(n).getSprite());
+
+    }
+
 
     @FXML
     void changeToPerfil(ActionEvent event) throws IOException {
