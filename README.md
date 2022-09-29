@@ -27,4 +27,4 @@
 ![IP2  Pokedex](https://user-images.githubusercontent.com/48563952/186936520-c2461387-29e6-4d55-b75e-28091ddbc528.png)
 
 ## Modelo navegacional
-<img width="2432" alt="Diagram -  IP2  Pokedex (1)" src="https://user-images.githubusercontent.com/48563952/186936603-4ac8b031-8d24-4729-83bc-da4cb013c734.png">
+<img width="2432" alt="Diagram -  IP2  Pokedex" src="https://user-images.githubusercontent.com/83479941/193089001-a7042938-a4c9-454f-b335-4a170c62bdf0.png">
