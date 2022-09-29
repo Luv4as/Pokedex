@@ -1,11 +1,14 @@
 package com.pokedex.pokedex.firebase;
 
 import com.google.firebase.database.*;
+import com.google.firebase.database.core.Context;
 import com.google.gson.Gson;
 import com.pokedex.pokedex.data.PokemonData;
 import com.pokedex.pokedex.data.UsersData;
 import com.pokedex.pokedex.model.pkm.*;
 import com.pokedex.pokedex.model.trainer.PokemonTrainer;
+import com.squareup.picasso.Picasso;
+import javafx.scene.image.ImageView;
 
 import java.util.ArrayList;
 import java.util.Optional;
