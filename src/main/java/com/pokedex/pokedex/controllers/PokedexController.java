@@ -1,6 +1,7 @@
 package com.pokedex.pokedex.controllers;
 
 import java.io.IOException;
+import java.security.SignedObject;
 
 import com.pokedex.pokedex.App;
 
@@ -23,10 +24,25 @@ public class PokedexController extends PokemonData {
     private Button btPerfil;
 
     @FXML
-    private Button btPokedex;
+    private Button btRegBattle;
 
     @FXML
-    private Button btRegBattle;
+    private Label nAttackPoints;
+
+    @FXML
+    private Label nDefensePoints;
+
+    @FXML
+    private Label nHealthPoints;
+
+    @FXML
+    private Label nSpecialAPoints;
+
+    @FXML
+    private Label nSpecialDPoints;
+
+    @FXML
+    private Label nSpeedPoints;
 
     @FXML
     private ImageView pokeImg;
@@ -35,7 +51,10 @@ public class PokedexController extends PokemonData {
     private Label pokeName;
 
     @FXML
-    private Label pokeType;
+    private Label pokeType1;
+
+    @FXML
+    private Label pokeType2;
 
     @FXML
     private TextField txtPokeNumber;
@@ -43,12 +62,80 @@ public class PokedexController extends PokemonData {
     @FXML
     void choosePokemon(ActionEvent event) {
 
-        Integer n = Integer.valueOf(txtPokeNumber.getText());
-        System.out.print(n);
+        Integer n = 1;
 
-        pokeName.setText(PokemonData.getInstance().getPokemonInListById(n).getName());
-        pokeType.setText(PokemonData.getInstance().getPokemonInListById(n).getType().get(0).getType().getName());
-//        pokeImg.setImage(getPokemonInList(n).getSprite());
+        try {
+
+            n = Integer.valueOf(txtPokeNumber.getText());
+
+            System.out.print(n);
+
+            pokeName.setText(PokemonData.getInstance().getPokemonInListById(n).getName().toUpperCase());
+            pokeType1.setText(PokemonData.getInstance().getPokemonInListById(n).getType().get(0).getType().getName().toUpperCase());
+
+            if (PokemonData.getInstance().getPokemonInListById(n).getType().get(1).getType().getName().equals(PokemonData.getInstance().getPokemonInListById(n).getType().get(0).getType().getName())) {
+                pokeType2.setVisible(false);
+            } else {
+                pokeType2.setVisible(true);
+                pokeType2.setText(PokemonData.getInstance().getPokemonInListById(n).getType().get(1).getType().getName().toUpperCase());
+            }
+
+            if (String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(0).getBase_stat()).equals("1")) {
+                nHealthPoints.setText("61");
+            } else {
+                nHealthPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(0).getBase_stat()));
+            }
+
+            if (String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(1).getBase_stat()).equals("2")) {
+                nAttackPoints.setText("40");
+            } else {
+                nAttackPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(1).getBase_stat()));
+            }
+
+            nDefensePoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(2).getBase_stat()));
+            nSpecialAPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(3).getBase_stat()));
+            nSpecialDPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(4).getBase_stat()));
+            nSpeedPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(5).getBase_stat()));
+
+            txtPokeNumber.clear();
+
+        }
+        catch (Exception ex) {
+
+            n = 1;
+
+            System.out.print(n);
+
+            pokeName.setText(PokemonData.getInstance().getPokemonInListById(n).getName().toUpperCase());
+            pokeType1.setText(PokemonData.getInstance().getPokemonInListById(n).getType().get(0).getType().getName().toUpperCase());
+
+            if (PokemonData.getInstance().getPokemonInListById(n).getType().get(1).getType().getName().equals(PokemonData.getInstance().getPokemonInListById(n).getType().get(0).getType().getName())) {
+                pokeType2.setVisible(false);
+            } else {
+                pokeType2.setVisible(true);
+                pokeType2.setText(PokemonData.getInstance().getPokemonInListById(n).getType().get(1).getType().getName().toUpperCase());
+            }
+
+            if (String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(0).getBase_stat()).equals("1")) {
+                nHealthPoints.setText("61");
+            } else {
+                nHealthPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(0).getBase_stat()));
+            }
+
+            if (String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(1).getBase_stat()).equals("2")) {
+                nAttackPoints.setText("40");
+            } else {
+                nAttackPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(1).getBase_stat()));
+            }
+
+            nDefensePoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(2).getBase_stat()));
+            nSpecialAPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(3).getBase_stat()));
+            nSpecialDPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(4).getBase_stat()));
+            nSpeedPoints.setText(String.valueOf(PokemonData.getInstance().getPokemonInListById(n).getStats().get(5).getBase_stat()));
+
+            txtPokeNumber.clear();
+
+        }
 
     }
 
