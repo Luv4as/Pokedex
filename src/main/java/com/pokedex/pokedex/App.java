@@ -45,6 +45,7 @@ public class App extends Application {
         PokemonData pkData = PokemonData.getInstance();
 //        UsersData trainerData = UsersData.getInstance();
 
+
         //Tela login
         FXMLLoader loader = new FXMLLoader(App.class.getResource("fxml/layoutLogin.fxml"));
         Parent root = loader.load();
