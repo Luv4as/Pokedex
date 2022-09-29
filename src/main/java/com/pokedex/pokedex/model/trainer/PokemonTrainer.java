@@ -124,4 +124,8 @@ public class PokemonTrainer {
     public void setnFugas(int nFugas) {
         this.nFugas = nFugas;
     }
+
+    public List<Integer> getPokemonsCapturados() {
+        return pokemonsCapturados;
+    }
 }

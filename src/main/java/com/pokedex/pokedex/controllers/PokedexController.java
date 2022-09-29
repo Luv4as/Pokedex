@@ -6,6 +6,8 @@ import java.security.SignedObject;
 import com.pokedex.pokedex.App;
 
 import com.pokedex.pokedex.data.PokemonData;
+import com.pokedex.pokedex.data.UsersData;
+import com.pokedex.pokedex.firebase.DatabaseInstance;
 import com.pokedex.pokedex.model.trainer.PokemonTrainer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -70,10 +72,10 @@ public class PokedexController extends PokemonData {
     @FXML
     private ImageView imgPokeball;
 
+    public Integer n = 1;
+
     @FXML
     void choosePokemon(ActionEvent event) {
-
-        Integer n = 1;
 
         try {
 
@@ -116,7 +118,7 @@ public class PokedexController extends PokemonData {
         }
         catch (Exception ex) {
 
-            n = 1;
+            n = 132;
 
             System.out.print(n);
 
@@ -168,7 +170,8 @@ public class PokedexController extends PokemonData {
 
     @FXML
     void capturePokemon(ActionEvent event) {
-        //addPokemon(Integer.valueOf(txtPokeNumber.getText()));
+        UsersData.getInstance().getUsersInListById(UsersData.getInstance().getCurrentUserId()).addPokemon(n.intValue());
+        DatabaseInstance.Set(String.format("users/%d/pokemonsCapturados/%d", UsersData.getInstance().getCurrentUserIndex(), UsersData.getInstance().getUsersInListById(UsersData.getInstance().getCurrentUserId()).getnPokCapt() + 1), n.intValue());
     }
 
     @FXML

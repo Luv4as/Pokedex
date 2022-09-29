@@ -74,6 +74,25 @@ public class PerfilController {
     @FXML
     private TextField textFoto;
 
+
+    @FXML
+    private ImageView pokeC1;
+
+    @FXML
+    private ImageView pokeC2;
+
+    @FXML
+    private ImageView pokeC3;
+
+    @FXML
+    private ImageView pokeC4;
+
+    @FXML
+    private ImageView pokeC5;
+
+    @FXML
+    private ImageView pokeC6;
+
     @FXML
     void change(ActionEvent event) {
 
@@ -88,6 +107,7 @@ public class PerfilController {
 
             n = Integer.valueOf(textFoto.getText());
             Image imgP = new Image(PokemonData.getInstance().getPokemonInListById(n).getSprite());
+            DatabaseInstance.Set(String.format("users/%d/urlImage", UsersData.getInstance().getCurrentUserIndex()), imgP.getUrl());
             selectPerfilImg.setImage(imgP);
             perfilImage.setImage(imgP);
             textFoto.clear();
@@ -95,8 +115,9 @@ public class PerfilController {
         }
         catch (Exception ex) {
 
-            n = 1;
+            n = 132;
             Image imgP = new Image(PokemonData.getInstance().getPokemonInListById(n).getSprite());
+            DatabaseInstance.Set(String.format("users/%d/urlImage", UsersData.getInstance().getCurrentUserIndex()), imgP.getUrl());
             selectPerfilImg.setImage(imgP);
             perfilImage.setImage(imgP);
             textFoto.clear();
@@ -135,6 +156,12 @@ public class PerfilController {
         nFugas.setText(String.valueOf(trn.getnFugas()));
         nVit.setText(String.valueOf(trn.getnVit()));
         nBatFeitas.setText(String.valueOf(trn.getnBatFeitas()));
+        nPokCapt.setText(String.valueOf(trn.getPokemonsCapturados().size()));
+
+        Image imgP = new Image(UsersData.getInstance().getUsersInListById(UsersData.getInstance().getCurrentUserId()).getUrlImage());
+        DatabaseInstance.Set(String.format("users/%d/urlImage", UsersData.getInstance().getCurrentUserIndex(), 1), imgP.getUrl());
+        perfilImage.setImage(imgP);
+        textFoto.clear();
 
         if(trn.getBadges().get(0).equals(true)) {
             badge1.opacityProperty().set(1);

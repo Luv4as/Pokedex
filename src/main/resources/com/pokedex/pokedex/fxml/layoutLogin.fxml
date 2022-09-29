@@ -33,13 +33,14 @@
 -->
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Label?>
-<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.pokedex.pokedex.controllers.LoginController">
+<VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.controllers.LoginController">
   <children>
     <AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="800.0" prefWidth="1280.0">
          <children>
@@ -53,12 +54,15 @@
                   <Image url="@../images/login/ImageLogo.png" />
                </image>
             </ImageView>
-            <ImageView fitHeight="50.0" fitWidth="365.0" layoutX="488.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../images/login/ImageGoogle.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btLogin" layoutX="488.0" layoutY="452.0" mnemonicParsing="false" onAction="#logar" opacity="0.0" prefHeight="50.0" prefWidth="304.0" />
+            <Button fx:id="btLogin" layoutX="488.0" layoutY="535.0" mnemonicParsing="false" onAction="#logar" prefHeight="43.0" prefWidth="330.0" style="-fx-background-color: #FF7373;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="51.0" />
+               </font></Button>
+            <TextField fx:id="textID" layoutX="488.0" layoutY="459.0" onAction="#logar" prefHeight="55.0" prefWidth="330.0" promptText="ID">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </TextField>
          </children>
     </AnchorPane>
   </children>
