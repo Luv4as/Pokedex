@@ -28,8 +28,7 @@ public class PokemonData {
     public void getAllPokemons() {
         if(pokemonList.isEmpty()) {
             try {
-//                GetPokemonOnDatabase();
-                SetPokemonOnDatabase();
+                GetPokemonOnDatabase();
             } catch (Exception err) {
                 SetPokemonOnDatabase();
             }

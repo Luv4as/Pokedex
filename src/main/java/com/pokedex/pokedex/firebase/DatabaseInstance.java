@@ -120,6 +120,15 @@ public class DatabaseInstance {
                             DatabaseInstance.GetUser("users", child, "nVit");
                             DatabaseInstance.GetUser("users", child, "nickname");
                             DatabaseInstance.GetUser("users", child, "urlImage");
+                            DatabaseInstance.GetUser("users", child, "badges/0");
+                            DatabaseInstance.GetUser("users", child, "badges/1");
+                            DatabaseInstance.GetUser("users", child, "badges/2");
+                            DatabaseInstance.GetUser("users", child, "badges/3");
+                            DatabaseInstance.GetUser("users", child, "badges/4");
+                            DatabaseInstance.GetUser("users", child, "badges/5");
+                            DatabaseInstance.GetUser("users", child, "badges/6");
+                            DatabaseInstance.GetUser("users", child, "badges/7");
+
                             break;
                         case "nickname":
                             UsersData.getInstance().getUsersInList(child).setNickname(str);
@@ -127,7 +136,30 @@ public class DatabaseInstance {
                         case "urlImage":
                             UsersData.getInstance().getUsersInList(child).setUrlImage(str);
                             break;
-
+                        case "badges/0":
+                            UsersData.getInstance().getUsersInList(child).setInBadge(0, Boolean.valueOf(str));
+                            break;
+                        case "badges/1":
+                            UsersData.getInstance().getUsersInList(child).setInBadge(1, Boolean.valueOf(str));
+                            break;
+                        case "badges/2":
+                            UsersData.getInstance().getUsersInList(child).setInBadge(2, Boolean.valueOf(str));
+                            break;
+                        case "badges/3":
+                            UsersData.getInstance().getUsersInList(child).setInBadge(3, Boolean.valueOf(str));
+                            break;
+                        case "badges/4":
+                            UsersData.getInstance().getUsersInList(child).setInBadge(4, Boolean.valueOf(str));
+                            break;
+                        case "badges/5":
+                            UsersData.getInstance().getUsersInList(child).setInBadge(5, Boolean.valueOf(str));
+                            break;
+                        case "badges/6":
+                            UsersData.getInstance().getUsersInList(child).setInBadge(6, Boolean.valueOf(str));
+                            break;
+                        case "badges/7":
+                            UsersData.getInstance().getUsersInList(child).setInBadge(7, Boolean.valueOf(str));
+                            break;
                     }
                 } catch (Exception error) {
                     System.out.println("error: " + error);
