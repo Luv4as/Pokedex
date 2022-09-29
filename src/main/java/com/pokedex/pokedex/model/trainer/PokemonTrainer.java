@@ -12,6 +12,7 @@ public class PokemonTrainer {
     private String nickname;
     private String urlImage;
     private List<CapturedPokemon> pokemonsOnPC;
+    private List<Integer> pokemonsCapturados;
     private List<Boolean> badges;
     private int nPokCapt;
     private int nBatFeitas;
@@ -19,7 +20,7 @@ public class PokemonTrainer {
     private int nDer;
     private int nFugas;
 
-    public PokemonTrainer(int nPokCapt, int nBatFeitas, int nVit, int nDer, int nFugas, String idTrainerCard, String nickname, String urlImage, List<CapturedPokemon> pokemonsOnPC, List<Boolean> badges) {
+    public PokemonTrainer(int nPokCapt, int nBatFeitas, int nVit, int nDer, int nFugas, String idTrainerCard, String nickname, String urlImage, List<CapturedPokemon> pokemonsOnPC, List<Boolean> badges, List<Integer> pokemonsCapturados) {
         this.nPokCapt = nPokCapt;
         this.nBatFeitas = nBatFeitas;
         this.nVit = nVit;
@@ -30,6 +31,11 @@ public class PokemonTrainer {
         this.urlImage = urlImage;
         this.pokemonsOnPC = pokemonsOnPC;
         this.badges = badges;
+        this.pokemonsCapturados = pokemonsCapturados;
+    }
+
+    public void addPokemon (int a) {
+        this.pokemonsCapturados.add(a);
     }
 
     public List<CapturedPokemon> getPokemonsOnPC() {

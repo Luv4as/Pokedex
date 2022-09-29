@@ -90,7 +90,7 @@ public class DatabaseInstance {
                     badges.add(false); badges.add(false);
                     badges.add(false); badges.add(false);
                     badges.add(false); badges.add(false);
-                    PokemonTrainer user = new PokemonTrainer(0, 0, 0, 0, 0, "", "test", "", null, badges);
+                    PokemonTrainer user = new PokemonTrainer(0, 0, 0, 0, 0, "", "test", "", null, badges, new ArrayList<Integer>());
                     UsersData.getInstance().addUserInList(user);
                 }
 

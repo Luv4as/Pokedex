@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import com.pokedex.pokedex.App;
 
+import com.pokedex.pokedex.data.PokemonData;
 import com.pokedex.pokedex.data.UsersData;
 import com.pokedex.pokedex.firebase.DatabaseInstance;
 import com.pokedex.pokedex.model.trainer.PokemonTrainer;
@@ -14,6 +15,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.scene.Node;
@@ -56,14 +59,49 @@ public class PerfilController {
     private Label nomeUser;
 
     @FXML
+    private ImageView perfilImage;
+
+    @FXML
+    private ImageView selectPerfilImg;
+
+
+    @FXML
     private ImageView badge1, badge2, badge3, badge4, badge5, badge6, badge7, badge8;
 
     @FXML
     private ImageView bg1, bg2, bg3, bg4, bg5, bg6, bg7, bg8;
 
     @FXML
+    private TextField textFoto;
+
+    @FXML
     void change(ActionEvent event) {
 
+    }
+
+    @FXML
+    void selectPerfil(ActionEvent event) {
+
+        Integer n = 1;
+
+        try {
+
+            n = Integer.valueOf(textFoto.getText());
+            Image imgP = new Image(PokemonData.getInstance().getPokemonInListById(n).getSprite());
+            selectPerfilImg.setImage(imgP);
+            perfilImage.setImage(imgP);
+            textFoto.clear();
+
+        }
+        catch (Exception ex) {
+
+            n = 1;
+            Image imgP = new Image(PokemonData.getInstance().getPokemonInListById(n).getSprite());
+            selectPerfilImg.setImage(imgP);
+            perfilImage.setImage(imgP);
+            textFoto.clear();
+
+        }
     }
 
     @FXML

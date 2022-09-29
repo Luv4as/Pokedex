@@ -32,17 +32,35 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.paint.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.controllers.PerfilController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pokedex.pokedex.controllers.PerfilController">
   <children>
       <AnchorPane prefHeight="802.0" prefWidth="1283.0">
          <children>
@@ -120,82 +138,82 @@
                               <RowConstraints maxHeight="147.0" minHeight="10.0" prefHeight="115.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
-                              <ImageView fx:id="bg3" onMouseClicked="#toggleBadge3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <ImageView fx:id="bg3" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#toggleBadge3" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="badge3" onMouseClicked="#toggleBadge3" fitHeight="80.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                              <ImageView fx:id="badge3" fitHeight="80.0" fitWidth="70.0" onMouseClicked="#toggleBadge3" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-amarelo%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bg7" onMouseClicked="#toggleBadge7" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <ImageView fx:id="bg7" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#toggleBadge7" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20213.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="badge7" onMouseClicked="#toggleBadge7" fitHeight="65.77" fitWidth="57.91" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                              <ImageView fx:id="badge7" fitHeight="65.77" fitWidth="57.91" onMouseClicked="#toggleBadge7" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-azul%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bg1" onMouseClicked="#toggleBadge1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="bg1" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#toggleBadge1" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bg2" onMouseClicked="#toggleBadge2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <ImageView fx:id="bg2" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#toggleBadge2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20213.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="badge2" onMouseClicked="#toggleBadge2" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                              <ImageView fx:id="badge2" fitHeight="80.0" fitWidth="80.0" onMouseClicked="#toggleBadge2" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-rosa%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bg4" onMouseClicked="#toggleBadge4" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <ImageView fx:id="bg4" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#toggleBadge4" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20215.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="badge4" onMouseClicked="#toggleBadge4" fitHeight="76.0" fitWidth="80.27" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                              <ImageView fx:id="badge4" fitHeight="76.0" fitWidth="80.27" onMouseClicked="#toggleBadge4" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-lgbt%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bg5" onMouseClicked="#toggleBadge5" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                              <ImageView fx:id="bg5" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#toggleBadge5" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20213.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="badge5" onMouseClicked="#toggleBadge5" fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                              <ImageView fx:id="badge5" fitHeight="88.0" fitWidth="76.0" onMouseClicked="#toggleBadge5" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-verde%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bg6" onMouseClicked="#toggleBadge6" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <ImageView fx:id="bg6" fitHeight="100.0" fitWidth="100.0" onMouseClicked="#toggleBadge6" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="badge6" onMouseClicked="#toggleBadge6" fitHeight="88.0" fitWidth="76.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                              <ImageView fx:id="badge6" fitHeight="88.0" fitWidth="76.0" onMouseClicked="#toggleBadge6" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-removebg-preview%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="badge1" onMouseClicked="#toggleBadge1" fitHeight="85.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                              <ImageView fx:id="badge1" fitHeight="85.0" fitWidth="85.0" onMouseClicked="#toggleBadge1" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
                                  <image>
                                     <Image url="@../images/perfil/badges-removebg-preview%20(1)%201.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="bg8" onMouseClicked="#toggleBadge8" fitHeight="100.0" fitWidth="100.0" layoutX="97.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <ImageView fx:id="bg8" fitHeight="100.0" fitWidth="100.0" layoutX="97.0" layoutY="138.0" onMouseClicked="#toggleBadge8" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/Rectangle%20212.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fx:id="badge8" onMouseClicked="#toggleBadge8" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                              <ImageView fx:id="badge8" fitHeight="80.0" fitWidth="80.0" onMouseClicked="#toggleBadge8" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="3" GridPane.rowIndex="2">
                                  <image>
                                     <Image url="@../images/perfil/badges-red%201.png" />
                                  </image>
@@ -313,16 +331,35 @@
                               <Image url="@../images/perfil/Rectangle%20261.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="125.0" fitWidth="125.0" layoutX="50.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="147.0" fitWidth="186.0" layoutX="39.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../images/perfil/Rectangle%204.png" />
                            </image>
                         </ImageView>
+                        <ImageView fx:id="perfilImage" fitHeight="94.0" fitWidth="99.0" layoutX="63.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
                         <Label fx:id="nomeUser" layoutX="52.0" layoutY="184.0" prefHeight="17.0" prefWidth="125.0" text="NOME DO USUÁRIO" textAlignment="CENTER" textFill="#ef4036">
                            <font>
                               <Font name="Candara Bold" size="14.0" />
                            </font>
                         </Label>
+                        <MenuButton layoutX="41.0" layoutY="32.0" mnemonicParsing="false" opacity="0.0" prefHeight="141.0" prefWidth="140.0">
+                          <items>
+                            <MenuItem mnemonicParsing="false">
+                                 <graphic>
+                                    <TextField fx:id="textFoto" onAction="#selectPerfil" promptText="Barra de Pesquisa" />
+                                 </graphic>
+                              </MenuItem>
+                            <MenuItem mnemonicParsing="false">
+                                 <graphic>
+                                    <ImageView fx:id="selectPerfilImg" fitHeight="94.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/pokedex/Bulbasauro.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                          </items>
+                        </MenuButton>
                      </children>
                 </AnchorPane>
                   <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
@@ -350,49 +387,13 @@
                                                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                             </rowConstraints>
                                              <children>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" layoutX="169.0" layoutY="20.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0">
+                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0">
                                                    <fill>
                                                       <LinearGradient endX="1.0" endY="1.0">
                                                          <stops>
                                                             <Stop>
                                                                <color>
-                                                                  <Color red="0.2862745225429535" green="0.8156862854957581" blue="0.6901960968971252" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.9843137264251709" green="0.4274509847164154" blue="0.42352941632270813" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.4588235318660736" green="0.7333333492279053" blue="0.9686274528503418" />
+                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
                                                                </color>
                                                             </Stop>
                                                             <Stop offset="1.0">
@@ -406,569 +407,7 @@
                                                 </Rectangle>
                                                 <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../images/perfil/image%204.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="115.0" fitWidth="115.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
-                                                   <image>
-                                                      <Image url="@../images/perfil/image%205.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2">
-                                                   <image>
-                                                      <Image url="@../images/perfil/image%206.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="1">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="2">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="3">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="4">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="5">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="6">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.rowIndex="7">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <Rectangle arcHeight="5.0" arcWidth="5.0" height="159.0" opacity="0.59" stroke="BLACK" strokeType="INSIDE" width="129.0" GridPane.columnIndex="2" GridPane.rowIndex="7">
-                                                   <fill>
-                                                      <LinearGradient endX="1.0" endY="1.0">
-                                                         <stops>
-                                                            <Stop>
-                                                               <color>
-                                                                  <Color red="0.7490196228027344" green="0.6627451181411743" blue="0.40392157435417175" />
-                                                               </color>
-                                                            </Stop>
-                                                            <Stop offset="1.0">
-                                                               <color>
-                                                                  <Color red="1.0" green="1.0" blue="1.0" />
-                                                               </color>
-                                                            </Stop>
-                                                         </stops>
-                                                      </LinearGradient>
-                                                   </fill>
-                                                </Rectangle>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="4">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="5">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="5">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="6">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="6">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="7">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="7">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
-                                                   </image>
-                                                   <effect>
-                                                      <DropShadow />
-                                                   </effect>
-                                                </ImageView>
-                                                <ImageView fitHeight="110.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7">
-                                                   <image>
-                                                      <Image url="@../images/pokedex/ditto.png" />
+                                                      <Image url="@../images/pokedex/Bulbasauro.png" />
                                                    </image>
                                                    <effect>
                                                       <DropShadow />

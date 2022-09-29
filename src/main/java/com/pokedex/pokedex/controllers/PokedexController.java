@@ -6,6 +6,7 @@ import java.security.SignedObject;
 import com.pokedex.pokedex.App;
 
 import com.pokedex.pokedex.data.PokemonData;
+import com.pokedex.pokedex.model.trainer.PokemonTrainer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,6 +20,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.scene.Node;
+
+import static com.pokedex.pokedex.firebase.DatabaseInstance.GetUser;
 
 public class PokedexController extends PokemonData {
 
@@ -165,7 +168,7 @@ public class PokedexController extends PokemonData {
 
     @FXML
     void capturePokemon(ActionEvent event) {
-
+        //addPokemon(Integer.valueOf(txtPokeNumber.getText()));
     }
 
     @FXML
